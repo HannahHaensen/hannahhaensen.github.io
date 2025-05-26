@@ -9,70 +9,32 @@
             <div class="row" style="">
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
                     <img style="padding:5%" width="100%"
-                         src="assets/img/anatomy.png">
+                         src="assets/img/img.png">
                 </div>
                 <div  class="col-lg-8 col-md-8 col-sm-12" style="padding:2%">
-                    <span class="papertitle">Multi-Layer Gaussian Splatting for Immersive Anatomy Visualization</span>
+                    <span class="papertitle">Locality-Sensitive Hashing for Efficient Hard Negative Contrastive Learning</span>
                     <br>
-                    <span style="font-weight: lighter"> C. Kleinbeck </span><span>H. Schieber</span>, <span style="font-weight: lighter"> K. Engel, R. Gutjahr, D. Roth</span>
+                    <span style="font-weight: lighter"> F. Deuser, P. Hausenblas </span><span>H. Schieber</span>, <span style="font-weight: lighter"> D. Roth, and N. Oswald</span>
                     <br>
-                    <em></em>2024
+                    <em></em>2025
                     <br>
                     <p class="d-inline-flex gap-1">
-                        <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseAnatomyGS" role="button"
-                           aria-expanded="false" aria-controls="collapseAnatomyGS">
+                        <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseLSH" role="button"
+                           aria-expanded="false" aria-controls="collapseLSH">
                             Abstract
                         </a>
                         <a class="btn btn-dark"
-                           href="https://arxiv.org/pdf/2410.16978">Arxiv</a>
-                        <a class="btn btn-dark" href="https://osf.io/tuwh5/">Dataset</a>
-                        <a class="btn btn-dark" href="https://github.com/roth-hex-lab/Multi-Layer-Gaussian-Splatting-for-Immersive-Anatomy-Visualization">GitHub</a>
+                           href="https://arxiv.org/pdf/2505.17844">Arxiv</a>
                     </p>
-                    <div class="collapse" id="collapseAnatomyGS">
+                    <div class="collapse" id="collapseLSH">
                         <div class="card card-body">
                             <p>
-                                In medical image visualization, path tracing of volumetric medical data like CT scans produces lifelike three-dimensional visualizations. Immersive VR displays can further enhance the understanding of complex anatomies. Going beyond the diagnostic quality of traditional 2D slices, they enable interactive 3D evaluation of anatomies, supporting medical education and planning. Rendering high-quality visualizations in real-time, however, is computationally intensive and impractical for compute-constrained devices like mobile headsets. We propose a novel approach utilizing GS to create an efficient but static intermediate representation of CT scans. We introduce a layered GS representation, incrementally including different anatomical structures while minimizing overlap and extending the GS training to remove inactive Gaussians. We further compress the created model with clustering across layers. Our approach achieves interactive frame rates while preserving anatomical structures, with quality adjustable to the target hardware. Compared to standard GS, our representation retains some of the explorative qualities initially enabled by immersive path tracing. Selective activation and clipping of layers are possible at rendering time, adding a degree of interactivity to otherwise static GS models. This could enable scenarios where high computational demands would otherwise prohibit using path-traced medical volumes.
+                                Contrastive learning is a representational learning paradigm in which a neural network maps data elements to feature vectors. It improves the feature space by forming lots with an anchor and examples that are either positive or negative based on class similarity. Hard negative examples, which are close to the anchor in the feature space but from a different class, improve learning performance. Finding such examples of high quality efficiently in large, high-dimensional datasets is computationally challenging. In this paper, we propose a GPU-friendly Locality-Sensitive Hashing (LSH) scheme that quantizes real-valued feature vectors into binary representations for approximate nearest neighbor search. We investigate its theoretical properties and evaluate it on several datasets from textual and visual domain. Our approach achieves comparable or better performance while requiring significantly less computation than existing hard negative mining strategies.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="row" style="background: lightblue">
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <img style="padding:5%" width="100%"
-                         src="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/refs/heads/gh-pages/assets/img/SCGS.png">
-                </div>
-                <div  class="col-lg-8 col-md-8 col-sm-12" style="padding:2%">
-                    <span class="papertitle">Semantics-Controlled Gaussian Splatting for Outdoor Scene Reconstruction and Rendering in Virtual Reality</span>
-                    <br>
-                    <span>H. Schieber</span>, <span style="font-weight: lighter"> J. Young, T. Langlotz, S. Zollmann, D. Roth</span>
-                    <br>
-                    <em></em>2024
-                    <br>
-                    <p class="d-inline-flex gap-1">
-                        <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseSCGS" role="button"
-                           aria-expanded="false" aria-controls="collapseSCGS">
-                            Abstract
-                        </a>
-                        <a class="btn btn-dark"
-                           href="http://www.arxiv.org/pdf/2409.15959">Arxiv</a>
-                        <a class="btn btn-dark"
-                           href="">GitHub (coming soon)</a>
-                        <a class="btn btn-dark" href="https://hannahhaensen.github.io/SCGS/">Website</a>
-                    </p>
-                    <div class="collapse" id="collapseSCGS">
-                        <div class="card card-body">
-                            <p>
-                                Advancements in 3D rendering like Gaussian Splatting (GS) allow novel view synthesis and real-time rendering in virtual reality (VR). However, GS-created 3D environments are often difficult to edit. For scene enhancement or to incorporate 3D assets, segmenting Gaussians by class is essential. Existing segmentation approaches are typically limited to certain types of scenes, e.g., ''circular'' scenes, to determine clear object boundaries. However, this method is ineffective when removing large objects in non-''circling'' scenes such as large outdoor scenes. We propose Semantics-Controlled GS (SCGS), a segmentation-driven GS approach, enabling the separation of large scene parts in uncontrolled, natural environments. SCGS allows scene editing and the extraction of scene parts for VR. Additionally, we introduce a challenging outdoor dataset, overcoming the ''circling'' setup. We outperform the state-of-the-art in visual quality on our dataset and in segmentation quality on the 3D-OVS dataset. We conducted an exploratory user study, comparing a 360-video, plain GS, and SCGS in VR with a fixed viewpoint. In our subsequent main study, users were allowed to move freely, evaluating plain GS and SCGS. Our main study results show that participants clearly prefer SCGS over plain GS. We overall present an innovative approach that surpasses the state-of-the-art both technically and in user experience.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
 
         </div>
     </section>

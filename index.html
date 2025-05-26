@@ -191,7 +191,8 @@
             </p>
             <div class="row">
                 <div class="col-12">
-                    <a href="#2025"><b style="font-size: large">2025</b></a>
+                    <a href="#Preprints"><b style="font-size: large">Preprints</b></a>
+                    | <a href="#2025"><b style="font-size: large">2025</b></a>
                     | <a href="#2024"><b style="font-size: large">2024</b></a>
                     | <a href="#2023"><b style="font-size: large">2023</b></a>
                     | <a href="#2022"><b style="font-size: large">2022</b></a>
@@ -199,6 +200,8 @@
             </div>
         </div>
     </section>
+    <!-- 2025 -->
+    <div preprint-html="preprints.html"></div>
     <!-- 2025 -->
     <div 2025-html="2025.html"></div>
 
@@ -372,6 +375,7 @@
         crossorigin="anonymous"></script>
 
 <script>
+    includeHTML('preprint-html');
     includeHTML('2025-html');
     includeHTML('2024-html');
     includeHTML('2023-html');
