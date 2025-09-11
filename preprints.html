@@ -5,6 +5,38 @@
             <hr>
             <h4 id="Preprints">Preprints</h4>
             <hr>
+            <!-- -->
+
+            <div class="row" style="">
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                    <img style="padding:5%" width="100%"
+                         src="assets/img/core.png">
+                </div>
+                <div  class="col-lg-8 col-md-8 col-sm-12" style="padding:2%">
+                    <span class="papertitle">CoRe-GS: Coarse-to-Refined Gaussian Splatting with Semantic Object Focus</span>
+                    <br>
+                    <span>H. Schieber</span>, <span style="font-weight: lighter"> D. Frischmann, S. Boche, V. Schaack, A. Schoellig, S. Leutenegger, and D. Roth</span>
+                    <br>
+                    <em></em>2025
+                    <br>
+                    <p class="d-inline-flex gap-1">
+                        <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseCoRe" role="button"
+                           aria-expanded="false" aria-controls="collapseCoRe">
+                            Abstract
+                        </a>
+                        <a class="btn btn-dark"
+                           href="https://arxiv.org/abs/2509.04859">Arxiv</a>
+                    </p>
+                    <div class="collapse" id="collapseCoRe">
+                        <div class="card card-body">
+                            <p>
+                                Mobile reconstruction for autonomous aerial robotics holds strong potential for critical applications such as tele-guidance and disaster response. These tasks demand both accurate 3D reconstruction and fast scene processing. Instead of reconstructing the entire scene in detail, it is often more efficient to focus on specific objects, i.e., points of interest (PoIs). Mobile robots equipped with advanced sensing can usually detect these early during data acquisition or preliminary analysis, reducing the need for full-scene optimization. Gaussian Splatting (GS) has recently shown promise in delivering high-quality novel view synthesis and 3D representation by an incremental learning process. Extending GS with scene editing, semantics adds useful per-splat features to isolate objects effectively.
+Semantic 3D Gaussian editing can already be achieved before the full training cycle is completed, reducing the overall training time. Moreover, the semantically relevant area, the PoI, is usually already known during capturing. To balance high-quality reconstruction with reduced training time, we propose CoRe-GS. We first generate a coarse segmentation-ready scene with semantic GS and then refine it for the semantic object using our novel color-based effective filtering for effective object isolation. This is speeding up the training process to be about a quarter less than a full training cycle for semantic GS. We evaluate our approach on two datasets, SCRREAM (real-world, outdoor) and NeRDS 360 (synthetic, indoor), showing reduced runtime and higher novel-view-synthesis quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!--  -->
             <div class="row" style="">
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
@@ -14,7 +46,7 @@
                 <div  class="col-lg-8 col-md-8 col-sm-12" style="padding:2%">
                     <span class="papertitle">Locality-Sensitive Hashing for Efficient Hard Negative Contrastive Learning</span>
                     <br>
-                    <span style="font-weight: lighter"> F. Deuser, P. Hausenblas </span><span>H. Schieber</span>, <span style="font-weight: lighter"> D. Roth, and N. Oswald</span>
+                    <span style="font-weight: lighter"> F. Deuser, P. Hausenblas </span><span>H. Schieber</span>, <span style="font-weight: lighter"> D. Roth, M. Werner, and N. Oswald</span>
                     <br>
                     <em></em>2025
                     <br>
