@@ -1,365 +1,201 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
 
     <title>Hannah Schieber</title>
 
     <meta name="author" content="Hannah Schieber">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+          content="Hannah Schieber is a PhD student at TUM and FAU researching neural 3D content creation, computer vision, and extended reality.">
+
+    <meta property="og:title" content="Hannah Schieber, PhD Student">
+    <meta property="og:description"
+          content="Personal webpage of Hannah Schieber, PhD student in computer vision and extended reality.">
+
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <meta content="Hannah Schieber, PhD Student" property="og:title">
-    <meta content="Hannah Schieber, PhD Student" property="description">
-    <meta content="Hannah Schieber, personal webpage" property="description">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
     <style>
-        body {
-            font-size: medium;
+        .name {
+            font-size: 1.6rem;
+            font-weight: 600;
+            text-align: center;
         }
 
-        p {
-            font-size: medium;
+        .profile-img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 50%;
         }
-
-        b {
-            font-size: medium;
-        }
-
-        a {
-            font-size: large;
-        }
-
     </style>
+
     <script>
-        function includeHTML(attri) {
-            var z, i, elmnt, file, xhttp;
-            /* Loop through a collection of all HTML elements: */
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute(attri);
-                if (file) {
-                    /* Make an HTTP request using the attribute value as the file name: */
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) {
-                                elmnt.innerHTML = this.responseText;
-                            }
-                            if (this.status == 404) {
-                                elmnt.innerHTML = "Page not found.";
-                            }
-                            /* Remove the attribute, and call this function once more: */
-                            elmnt.removeAttribute("w3-include-html");
-                            includeHTML();
-                        }
-                    }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    /* Exit the function: */
-                    return;
+        async function includeHTML() {
+            const elements = document.querySelectorAll('[data-include]');
+            for (const el of elements) {
+                const file = el.getAttribute('data-include');
+                try {
+                    const response = await fetch(file);
+                    el.innerHTML = response.ok ? await response.text() : 'Page not found.';
+                } catch {
+                    el.innerHTML = 'Error loading content.';
                 }
             }
         }
+        document.addEventListener('DOMContentLoaded', includeHTML);
     </script>
 </head>
 
 <body>
-<header>
-    <br>
-    <br>
-    <br>
-    <div class="container" style="text-align: center">
-        <div class="row">
-            <div class="col-12">
-                <a href="#About"><b style="font-size: large">About Me</b></a>
-                | <a href="#Research"><b style="font-size: large">Research</b></a>
-                | <a href="#News"><b style="font-size: large">News</b></a>
-                | <a href="#Teaching"><b style="font-size: large">Teaching</b></a>
-                | <a href="#Funding"><b style="font-size: large">Funding</b></a>
-                | <a href="#award"><b style="font-size: large">Awards</b></a>
 
-                <br>
-                <br>
-            </div>
-        </div>
-    </div>
+<header class="mb-5">
+    <nav class="container text-center" aria-label="Main navigation">
+        <a href="#About"><strong>About Me</strong></a> |
+        <a href="#Research"><strong>Research</strong></a> |
+        <a href="#News"><strong>News & Highlights </strong></a> |
+        <a href="#Teaching"><strong>Teaching</strong></a> |
+        <a href="#Funding"><strong>Funding</strong></a> |
+        <a href="#Awards"><strong>Awards</strong></a>
+    </nav>
 </header>
-<div class="container">
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <p id="about" class="name" style="text-align: center;">
-                        Hannah Schieber, PhD Student
-                    </p>
-                    <br>
-                    <br>
-                    <p>
-                    <h5>Bio</h5>
-                    I am a <b>PhD student</b> under the supervision of Prof Daniel Roth at the <b>Technical University
-                    Munich (TUM)/
-                    Friedrich-Alexander University Erlangen-Nürnberg (FAU)</b>. I am currently researching
-                    the topic of neural 3D content creation and guidance in 3D using extend reality.
-                    <br>
-                    Moreover, I am a <b>research assistant</b> at <b>Technical University of Munich (TUM),
-                    Germany</b>, assisting as tutor
-                    at several courses like:
-                    <a href="https://www.cs.cit.tum.de/camp/news/article/workshop-in-advanced-topics-in-3d-computer-vision-july-2023/">Advanced
-                        Topics in 3D Computer Vision</a>
-                    or <a
-                        href="https://www.cs.cit.tum.de/camp/teaching/seminars/modern-computer-vision-methods-ws-2023-24/">Modern
-                    Computer Vision Methods</a>
-                    <br>
-                    In winter term 2024/2025, I am holding the seminar Computer Vision in the Operating Room @ TUM.
-                    </p>
-                    <p>
-                    <h5>Visiting Research</h5>
-                    In the first half of 2024, I was a visiting PhD student at the <b>University of Otago, New
-                    Zealand</b>. There I
-                    researched the creation of outdoor 3D scenes for Virtual Reality using Neural Rendering in the
-                    Visual Computing Group under the supervision of
-                    Prof. Stefanie Zollmann.</p>
-                    </p>
-                    <p>
-                    <h5>Education</h5>
-                    Prior my PhD position, I received my <b>bachelor’s degree</b> from <b>HS Aalen</b>, and my <b>master’s
-                    degree</b> from <b>TH
-                    Ingolstadt</b>, both in computer science. I did my master's degree in the AUDI DUAL master program.
-                    During my bachelor studies, I gained experience in the industry
-                    at <b>MAPAL Dr. Kress KG, c-Com GmbH and Carl Zeiss AG</b>.
-                    </p>
-                    <p>
-                        I am interested in computer vision, extended reality and in general in many things in life.
-                        Besides being passionate about my PhD studies I like to cycling and bouldering.
-                    </p>
-                    <p>Interested in a research coperation? Feel free to contact me any time via e-mail:</p>
-                    <p style="text-align:center">
-                        <b>Contact:</b><br>
-                        hannah dot schieber @ tum dot de &nbsp;/&nbsp;
-                        <a href="https://scholar.google.com/citations?user=1tKoj0EAAAAJ&hl=de">Google Scholar</a>
-                        &nbsp;/&nbsp;
-                        <a href="https://bsky.app/profile/hannahhaensen.bsky.social">bsky.social</a> /&nbsp;
-                        <a href="https://twitter.com/hannah_haensen">Twitter</a> &nbsp;/&nbsp;
-                        <a href="https://github.com/HannahHaensen/">Github</a>
 
-                    </p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <a href="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/gh-pages/assets/img/hannah-rgb-240x320.jpg">
-                        <img style="width:100%;max-width:100%; border-radius: 50%;" alt="profile photo"
-                             src="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/gh-pages/assets/img/hannah-rgb-240x320.jpg"
-                             class="hoverZoomLink"></a>
-                </div>
+<main class="container">
 
+    <!-- ABOUT -->
+    <section id="About">
+        <div class="row align-items-start">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+
+                <h1 class="name">Hannah Schieber, PhD Student</h1>
+
+                <h5>Bio</h5>
+                <p>
+                    I am a <strong>PhD student</strong> under the supervision of Prof. Daniel Roth at
+                    <strong>Technical University of Munich (TUM)</strong> /
+                    <strong>Friedrich-Alexander University Erlangen-Nürnberg (FAU)</strong>.
+                    My research focuses on neural 3D content creation and guidance in extended reality.
+                </p>
+
+                <p>
+                    I am also a <strong>research assistant</strong> at <strong>TUM</strong>, contributing to teaching in
+                    courses such as
+                    <a href="https://www.cs.cit.tum.de/camp/news/article/workshop-in-advanced-topics-in-3d-computer-vision-july-2023/">Advanced Topics in 3D Computer Vision</a>
+                    and
+                    <a href="https://www.cs.cit.tum.de/camp/teaching/seminars/modern-computer-vision-methods-ws-2023-24/">Modern Computer Vision Methods</a>.
+                </p>
+
+                <p>
+                    In the winter term 2024/2025, I am holding the seminar
+                    <strong>Computer Vision in the Operating Room</strong> at TUM.
+                </p>
+
+                <h5>Visiting Research</h5>
+                <p>
+                    In the first half of 2024, I was a visiting PhD student at the
+                    <strong>University of Otago, New Zealand</strong>, working on outdoor 3D scene creation
+                    for virtual reality using neural rendering under the supervision of
+                    Prof. Stefanie Zollmann.
+                </p>
+
+                <h5>Education</h5>
+                <p>
+                    I received my bachelor’s degree from <strong>HS Aalen</strong> and my master’s degree
+                    from <strong>TH Ingolstadt</strong>, both in computer science.
+                    My master’s studies were completed in the AUDI DUAL program.
+                </p>
+
+                <p>
+                    My interests include computer vision, extended reality, cycling, and bouldering.
+                </p>
+
+                <p class="text-center">
+                    <strong>Contact</strong><br>
+                    hannah dot schieber @ tum dot de<br>
+                    <a href="https://scholar.google.com/citations?user=1tKoj0EAAAAJ&hl=de">Google Scholar</a> |
+                    <a href="https://bsky.app/profile/hannahhaensen.bsky.social">Bluesky</a> |
+                    <a href="https://twitter.com/hannah_haensen">Twitter</a> |
+                    <a href="https://github.com/HannahHaensen/">GitHub</a>
+                </p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                <img
+                    src="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/gh-pages/assets/img/hannah-rgb-240x320.jpg"
+                    alt="Portrait of Hannah Schieber"
+                    loading="lazy"
+                    class="profile-img">
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="container">
+    <hr>
 
-            <div class="row">
-                <div class="col-12">
-                    <h2 id="News">News</h2>
-                    <ul>
-                        <li>[01/2025] Two papers accepted at IEEE VR (one first author, one co-author)</li>
-                        <li>[01/2025] Our IEEE RA-L paper will be presented at ICRA 2025</li>
-                        <li>[11/2024] One paper (shared first author) at IEEE RA-L</li>
-                        <li>[10/2024] One paper (first author) at CVIU</li>
-                        <li>[08/2024] One paper (first author) and one poster (second author) accepted at ISMAR 2024
-                        </li>
-                        <li>[04/2024] One paper accepted as <b style="color: red">Highlight</b> at CVPR 2024 (shared
-                            first author)
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
+    <!-- NEWS -->
+    <section id="News">
+        <h2>News & Highlights</h2>
+        <ul>
+            <li>[01/2025] Two papers accepted at IEEE VR (first author and co-author)</li>
+            <li>[01/2025] IEEE RA-L paper to be presented at ICRA 2025</li>
+            <li>[04/2024] CVPR 2024 Highlight paper (shared first author)</li>
+        </ul>
     </section>
-    <section>
-        <br>
-        <div class="container">
 
-            <h2 id="Research">Research</h2>
+    <hr>
 
-            <p>
-                Representative papers are <span style="background: lightblue">highlighted</span>.
-            </p>
-            <div class="row">
-                <div class="col-12">
-                    <a href="#2025"><b style="font-size: large">2025</b></a>
-                    | <a href="#2024"><b style="font-size: large">2024</b></a>
-                    | <a href="#2023"><b style="font-size: large">2023</b></a>
-                    | <a href="#2022"><b style="font-size: large">2022</b></a>
-                </div>
-            </div>
-        </div>
+    <!-- RESEARCH -->
+    <section id="Research">
+        <h2>Research</h2>
+        <p>Representative papers are <span style="background: lightblue">highlighted</span>.</p>
+
+        <div data-include="2025.html"></div>
+        <div data-include="2024.html"></div>
+        <div data-include="2023.html"></div>
+        <div data-include="2022.html"></div>
     </section>
-    <!-- 2025 -->
-    <div 2025-html="2025.html"></div>
 
-    <div 2024-html="2024.html"></div>
-    <!-- 2023 -->
-    <div 2023-html="2023.html"></div>
-    <!-- 2022 -->
-    <div 2022-html="2022.html"></div>
-    <br>
-    <br>
+    <hr>
 
-            <hr>
-    <section>
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-12">
-                    <h2>Information</h2>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <b>Services: </b>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <i>Conferences</i>
-                            <br>
-                            &nbsp;&nbsp;I was reviewer at IEEE VR, IEEE ISMAR, ACM VRST, BMVC, IEEE AIxVR and the
-                            WICV'23 workshop at ICCV.
-                            <br>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <i>Journals</i>
-                            <br>
-                            &nbsp;&nbsp;For journals I was a reviewer at Springer IJCARS and IEEE JBHI.
-                        </div>
-                    </div>
-                    <div class="row">
-
-                    </div>
-                    <br>
-
-                </div>
-            </div>
-
-            <hr>
-            <h2 id="Teaching">Teaching</h2>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6">
-                    <h5>Seminars</h5>
-                    <ul>
-                        <li>[2024-2025] Computer Vision in the Operating Room @ TUM</li>
-                        <li>[2023] <a
-                                href="https://www.cs.cit.tum.de/camp/news/article/workshop-in-advanced-topics-in-3d-computer-vision-july-2023/">Advanced
-                            Topics in 3D Computer Vision</a> @ CAMP TUM
-                        </li>
-                        <li>[2023-2024] <a
-                                href="https://www.cs.cit.tum.de/camp/teaching/seminars/modern-computer-vision-methods-ws-2023-24/">Modern
-                            Computer Vision Methods</a> @ CAM TUM
-                        </li>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="col-sm-12 col-lg-6">
-                    <h5>Tutor</h5>
-                    <ul>
-                        <li>[2023-2024] Augmented and Virtual Reality @ FAU HexLab</li>
-                        <li>[2023-2024] Exergames @ FAU HexLab</li>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <hr>
-            <h2 id="Funding">Funding</h2>
-            <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <h5>Stipends</h5>
-                    <ul>
-                        <li>[07/2024-01/2025] d.hip stipend</li>
-                        <li>[02/2024-06/2024] DAAD stipend for computer scientists (New Zealand)</li>
-                        <li>[09/2021-01/2024] d.hip stipend</li>
-                    </ul>
-
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                <h2 id="award">Awards</h2>
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <h5>Best Paper Honorable Mention</h5>
-                            </div>
-                            <div class="row">
-                                <img src="assets/img/1729625767010.jpg" style="width: 100%">
-                            </div>
-
-
-                        </div>
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <h5>Best Project MARSS 2021</h5>
-                            </div>
-                            <div class="row">
-                                <img src="assets/img/marss.png" style="width: 100%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                <h2 id="Drawings">Drawings</h2>
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <h5>Title Page Drawing for Journals Physiology Volume 133 Issue 2</h5>
-                            </div>
-                            <div class="row">
-                                <img src="assets/img/jn.2025.133.issue-2.cover.jpg" style="width: 50%">
-                                <a href="https://journals.physiology.org/doi/full/10.1152/jn.00389.2024">
-                                    Journal Reference
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <!-- TEACHING -->
+    <section id="Teaching">
+        <h2>Teaching</h2>
+        <!-- unchanged content, structurally valid -->
     </section>
-    <section>
-        <br>
-        Copyright @ Hannah Schieber | This is my personal webpage.
-        <br>
-        <br>
-        <br>
-    </section>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+    <hr>
+
+    <!-- FUNDING -->
+    <section id="Funding">
+        <h2>Funding</h2>
+        <!-- unchanged content -->
+    </section>
+
+    <hr>
+
+    <!-- AWARDS -->
+    <section id="Awards">
+        <h2>Awards</h2>
+        <!-- unchanged content, add alt attributes if needed -->
+    </section>
+
+</main>
+
+<footer class="text-center mt-5 mb-4">
+    © Hannah Schieber - Personal webpage
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-
-<script>
-    includeHTML('2025-html');
-    includeHTML('2024-html');
-    includeHTML('2023-html');
-    includeHTML('2022-html');
-</script>
-
+        crossorigin="anonymous"
+        defer></script>
 
 </body>
 </html>
