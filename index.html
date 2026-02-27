@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <title>Hannah Schieber</title>
+    <title>Hannah Schieber | PhD Student</title>
 
     <meta name="author" content="Hannah Schieber">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,32 +10,23 @@
     <meta name="description"
           content="Hannah Schieber is a PhD student at TUM and FAU researching neural 3D content creation, computer vision, and extended reality.">
 
-    <meta property="og:title" content="Hannah Schieber, PhD Student">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hannah Schieber | PhD Student">
     <meta property="og:description"
           content="Personal webpage of Hannah Schieber, PhD student in computer vision and extended reality.">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/gh-pages/assets/img/hannah-rgb-240x320.jpg">
 
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
           crossorigin="anonymous">
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="stylesheet.css">
-
-    <style>
-        .name {
-            font-size: 1.6rem;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .profile-img {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 50%;
-        }
-    </style>
 
     <script>
         async function includeHTML() {
@@ -57,11 +47,11 @@
 
 <body>
 
-<header class="mb-5" style="padding-top: 5em">
+<header class="pt-5 mb-5">
     <nav class="container text-center" aria-label="Main navigation">
-        <a href="#About"><strong>About Me</strong></a> |
+        <a href="#About"><strong>About</strong></a> |
         <a href="#Research"><strong>Research</strong></a> |
-        <a href="#News"><strong>News & Highlights </strong></a> |
+        <a href="#News"><strong>News</strong></a> |
         <a href="#Teaching"><strong>Teaching</strong></a> |
         <a href="#Funding"><strong>Funding</strong></a> |
         <a href="#Awards"><strong>Awards</strong></a>
@@ -70,90 +60,78 @@
 
 <main class="container">
 
-    <!-- ABOUT -->
-    <section id="About">
+    <!-- ================= ABOUT ================= -->
+    <section id="About" class="mb-5">
         <div class="row align-items-start">
-            <div class="col-lg-8 col-md-8 col-sm-12">
 
-                <h1 class="name">Hannah Schieber, PhD Student</h1>
+            <div class="col-lg-8">
+                <h1 class="name">Hannah Schieber</h1>
+                <p class="lead">PhD Student in Computer Vision & Extended Reality</p>
 
-                <h5>Bio</h5>
                 <p>
-                    I am a <strong>PhD student</strong> under the supervision of <a href="https://hex-lab.io">Prof. Daniel Roth</a> at
-                    <strong>Technical University of Munich (TUM)</strong> /
-                    <strong>Friedrich-Alexander University Erlangen-Nürnberg (FAU)</strong>.
-                    My research focuses on novel view synthesis for 3D content creation and guidance in extended reality.
+                    I am a <strong>PhD student</strong> supervised by
+                    <a href="https://hex-lab.io" target="_blank" rel="noopener">Prof. Daniel Roth</a>
+                    at <strong>TUM</strong> and <strong>FAU</strong>.
+                    My research focuses on novel view synthesis, neural 3D content creation,
+                    and guidance systems in extended reality.
                 </p>
 
                 <p>
-                    I am also a <strong>research assistant</strong> at <strong>TUM</strong>, contributing to teaching in
-                    courses such as
-                    <a href="https://www.cs.cit.tum.de/camp/news/article/workshop-in-advanced-topics-in-3d-computer-vision-july-2023/">Advanced Topics in 3D Computer Vision</a>
+                    I contribute to teaching at TUM in courses such as
+                    <a href="https://www.cs.cit.tum.de/camp/news/article/workshop-in-advanced-topics-in-3d-computer-vision-july-2023/"
+                       target="_blank" rel="noopener">Advanced Topics in 3D Computer Vision</a>
                     and
-                    <a href="https://www.cs.cit.tum.de/camp/teaching/seminars/modern-computer-vision-methods-ws-2023-24/">Modern Computer Vision Methods</a>.
+                    <a href="https://www.cs.cit.tum.de/camp/teaching/seminars/modern-computer-vision-methods-ws-2023-24/"
+                       target="_blank" rel="noopener">Modern Computer Vision Methods</a>.
                 </p>
 
                 <p>
-                    Since winter semester 2024/2025, I am holding the seminar
-                    <strong>Computer Vision in the Operating Room</strong> at TUM.
-                </p>
-
-                <h5>Visiting Research</h5>
-                <p>
-                    In the first half of 2024, I was a visiting PhD student at the
-                    <strong>University of Otago, New Zealand</strong>, working on outdoor 3D scene creation
-                    for virtual reality using <a href="https://hannahhaensen.github.io/SCGS/">semantic Gaussian Splatting</a> under the supervision of
-                    <a href="https://szollmann.github.io">Prof. Stefanie Zollmann.</a>
-                </p>
-
-                <h5>Education</h5>
-                <p>
-                    I received my bachelor’s degree from <strong>HS Aalen</strong> and my master’s degree
-                    from <strong>TH Ingolstadt</strong>, both in computer science. Parts of my master thesis have been published at <a href="https://hannahhaensen.github.io/pyfu/">IEEE IV</a>. My master’s studies were completed in the AUDI DUAL program.
+                    In 2024, I was a visiting PhD student at the
+                    <strong>University of Otago, New Zealand</strong>,
+                    working on outdoor 3D scene creation for VR using semantic Gaussian Splatting.
                 </p>
 
                 <p>
-                    My interests include computer vision, extended reality, cycling, and bouldering.
+                    My academic background includes a bachelor’s degree from HS Aalen
+                    and a master’s degree from TH Ingolstadt (Computer Science).
                 </p>
 
-                <p class="text-center">
+                <div class="mt-4 text-center">
                     <strong>Contact</strong><br>
                     hannah dot schieber @ tum dot de<br>
-                    <a href="https://scholar.google.com/citations?user=1tKoj0EAAAAJ&hl=de">Google Scholar</a> |
-                    <a href="https://bsky.app/profile/hannahhaensen.bsky.social">Bluesky</a> |
-                    <a href="https://twitter.com/hannah_haensen">Twitter</a> |
-                    <a href="https://github.com/HannahHaensen/">Github</a> |
+                    <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> |
+                    <a href="https://github.com/HannahHaensen" target="_blank" rel="noopener">GitHub</a> |
                     <a href="assets/Hannah_Schieber_CV.pdf">CV</a>
-                </p>
+                </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                <img
-                    src="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/gh-pages/assets/img/hannah-rgb-240x320.jpg"
-                    alt="Portrait of Hannah Schieber"
-                    loading="lazy"
-                    class="profile-img">
+            <div class="col-lg-4 text-center">
+                <img src="https://raw.githubusercontent.com/HannahHaensen/hannahhaensen.github.io/gh-pages/assets/img/hannah-rgb-240x320.jpg"
+                     alt="Portrait of Hannah Schieber"
+                     class="profile-img img-fluid rounded-circle"
+                     loading="lazy">
             </div>
+
         </div>
     </section>
 
     <hr>
 
-    <!-- NEWS -->
-    <section id="News">
+    <!-- ================= NEWS ================= -->
+    <section id="News" class="mb-5">
         <h2>News & Highlights</h2>
         <ul>
             <li>[01/2026] Two papers accepted at IEEE VR (co-author)</li>
             <li>[01/2025] Two papers accepted at IEEE VR (first author and co-author)</li>
-            <li>[01/2025] IEEE RA-L paper to be presented at ICRA 2025</li>
+            <li>[01/2025] IEEE RA-L paper presented at ICRA 2025</li>
             <li>[04/2024] CVPR 2024 Highlight paper (shared first author)</li>
         </ul>
     </section>
 
     <hr>
 
-    <!-- RESEARCH -->
-    <section id="Research">
+    <!-- ================= RESEARCH ================= -->
+    <section id="Research" class="mb-5">
         <h2>Research</h2>
         <p>Representative papers are <span style="background: mediumseagreen">highlighted</span>.</p>
         <a href="#Preprints"><strong>Preprints</strong></a> |
@@ -172,131 +150,76 @@
 
     <hr>
 
-    <!-- TEACHING -->
-    <section id="Teaching">
+    <!-- ================= TEACHING ================= -->
+    <section id="Teaching" class="mb-5">
         <h2>Teaching</h2>
+
         <div class="row">
-                <div class="col-sm-12 col-lg-6">
-                    <h5>Seminars</h5>
-                    <ul>
-                        <li>[2024-2025] Computer Vision in the Operating Room @ TUM</li>
-                        <li>[2024] <a
-                                href="https://www.cs.cit.tum.de/camp/teaching/practical-courses/praktikum-on-3d-computer-vision-ws-2024-25/">
-                            Praktikum in 3D Computer Vision</a> @ CAMP TUM
-                        </li>
-                        <li>[2023, 2024] <a
-                                href="https://www.cs.cit.tum.de/camp/news/article/workshop-in-advanced-topics-in-3d-computer-vision-july-2023/">Advanced
-                            Topics in 3D Computer Vision</a> @ CAMP TUM
-                        </li>
-                        <li>[2022-2023] and [2023-2024] <a
+            <div class="col-lg-6">
+                <h3>Seminars</h3>
+                <ul>
+                    <li>[WS2024/2025, WS2025/2026] Computer Vision in the Operating Room @ TUM</li>
+                    <li>[2024] Praktikum in 3D Computer Vision @ CAMP TUM</li>
+                    <li>[SS2023, SS2025] Advanced Topics in 3D Computer Vision @ CAMP TUM</li>
+                     <li>[2022-2023] and [2023-2024] <a
                                 href="https://www.cs.cit.tum.de/camp/teaching/seminars/modern-computer-vision-methods-ws-2023-24/">Modern
                             Computer Vision Methods</a> @ CAMP TUM
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="col-sm-12 col-lg-6">
-                    <h5>Tutor</h5>
-                    <ul>
-                        <li>[2023-2024] Augmented and Virtual Reality @ FAU Hex-Lab</li>
-                        <li>[2023-2024] Exergames @ FAU Hex-Lab</li>
-                        </li>
-                    </ul>
-
-                </div>
+                     </li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6">
-                    <h5>Supervision</h5>
-                    <ul>
+
+            <div class="col-lg-6">
+                <h3>Supervision</h3>
+                <ul>
                         <li>[since 2024] Supervision of four bachelor theses, two master projects and two master theses @ TUM</li>
-                        <li>[2022-2023] Supervision of two bachelor thesis students and three master thesis student @ FAU</li>
+                        <li>[2022-2023] Supervision of two bachelor thesis students, one master project and three master thesis student @ FAU</li>
                     </ul>
-
-                </div>
-                <div class="col-sm-12 col-lg-6">
-
-                </div>
             </div>
+        </div>
     </section>
 
     <hr>
 
-    <!-- FUNDING -->
-    <section id="Funding">
+    <!-- ================= FUNDING ================= -->
+    <section id="Funding" class="mb-5">
         <h2>Funding</h2>
-        <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <h5>Stipends</h5>
-                    <ul>
-                        <li>[07/2024-01/2025] d.hip stipend</li>
-                        <li>[02/2024-06/2024] DAAD stipend for computer scientists (New Zealand)</li>
-                        <li>[09/2021-01/2024] d.hip stipend</li>
-                    </ul>
-
-                </div>
-            </div>
-            <hr>
-
+        <ul>
+            <li>[07/2024–01/2025] d.hip stipend</li>
+            <li>[02/2024–06/2024] DAAD stipend (New Zealand)</li>
+            <li>[09/2021–01/2024] d.hip stipend</li>
+        </ul>
     </section>
 
-    <!-- AWARDS -->
-    <section id="Awards">
+    <hr>
+
+    <!-- ================= AWARDS ================= -->
+    <section id="Awards" class="mb-5">
         <h2>Awards</h2>
+
         <div class="row">
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                <h2 id="award">Awards</h2>
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <h5>Best Paper Honorable Mention</h5>
-                            </div>
-                            <div class="row">
-                                <img src="assets/img/1729625767010.jpg" style="width: 100%">
-                            </div>
-
-
-                        </div>
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <h5>Best Project MARSS 2021</h5>
-                            </div>
-                            <div class="row">
-                                <img src="assets/img/marss.png" style="width: 100%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-6 col-md-6">
-                <h2 id="Drawings">Drawings</h2>
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <h5>Title Page Drawing for Journals Physiology Volume 133 Issue 2</h5>
-                            </div>
-                            <div class="row">
-                                <img src="assets/img/jn.2025.133.issue-2.cover.jpg" style="width: 50%">
-                                <a href="https://journals.physiology.org/doi/full/10.1152/jn.00389.2024">
-                                    Journal Reference
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-6">
+                <h3>Honorable Mention</h3>
+                <img src="assets/img/1729625767010.jpg"
+                     class="img-fluid"
+                     alt="Honorable Mention">
             </div>
+
+            <div class="col-lg-6">
+                <h3>Best Project MARSS 2021 Award</h3>
+                <img src="assets/img/marss.png"
+                     class="img-fluid"
+                     alt="Best Project MARSS 2021 Award">
+            </div>
+        </div>
     </section>
 
 </main>
 
 <footer class="text-center mt-5 mb-4">
-    © Hannah Schieber - Personal webpage
+    © Hannah Schieber – Personal Webpage
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         defer></script>
 
 </body>

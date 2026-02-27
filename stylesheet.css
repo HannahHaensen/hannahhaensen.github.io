@@ -1,15 +1,47 @@
-/* =========================
+/* =====================================================
+   ROOT VARIABLES (THEME + TYPOGRAPHY SCALE)
+   ===================================================== */
+
+:root {
+  /* Font */
+  --font-primary: 'Lato', Verdana, Helvetica, sans-serif;
+
+  /* Colors */
+  --color-text: #111;
+  --color-link: #1772d0;
+  --color-link-hover: #f09228;
+  --color-highlight: #ffffd0;
+
+  /* Typography scale */
+  --fs-base: 1rem;           /* 16px */
+  --fs-h1: 2rem;             /* 32px */
+  --fs-h2: 1.5rem;           /* 24px */
+  --fs-h3: 1.25rem;          /* 20px */
+  --line-height: 1.6;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+
+  /* Transition */
+  --transition-fast: 0.2s ease-in-out;
+}
+
+
+/* =====================================================
    FONT LOADING (OPTIMIZED)
-   ========================= */
+   ===================================================== */
 
-/* Use font-display: swap to avoid FOIT */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lato Regular'), local('Lato-Regular'),
-       url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  src:
+    local('Lato Regular'),
+    local('Lato-Regular'),
+    url('https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2') format('woff2');
 }
 
 @font-face {
@@ -17,8 +49,10 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Lato Bold'), local('Lato-Bold'),
-       url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  src:
+    local('Lato Bold'),
+    local('Lato-Bold'),
+    url('https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2') format('woff2');
 }
 
 @font-face {
@@ -26,8 +60,10 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local('Lato Italic'), local('Lato-Italic'),
-       url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  src:
+    local('Lato Italic'),
+    local('Lato-Italic'),
+    url('https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2') format('woff2');
 }
 
 @font-face {
@@ -35,120 +71,158 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'),
-       url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  src:
+    local('Lato Bold Italic'),
+    local('Lato-BoldItalic'),
+    url('https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2') format('woff2');
 }
 
-/* =========================
-   BASE TYPOGRAPHY
-   ========================= */
+
+/* =====================================================
+   BASE STYLES
+   ===================================================== */
 
 html {
-  font-size: 16px;
+  font-size: 100%; /* respects user preferences */
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #000;
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Remove redundant font declarations */
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
 p,
 td,
 th,
 tr {
-  font-size: 1rem;
+  margin: 0 0 var(--spacing-md) 0;
+  font-size: var(--fs-base);
 }
 
-/* =========================
-   LINKS
-   ========================= */
-
-a {
-  color: #1772d0;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: #f09228;
-  text-decoration: underline;
-}
-
-/* =========================
-   HEADINGS
-   ========================= */
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-primary);
   font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.3;
 }
 
-h2 {
-  font-size: 1.375rem; /* ~22px */
-  font-weight: 500;
-}
-
-/* =========================
-   TEXT STYLES
-   ========================= */
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); font-weight: 500; }
+h3 { font-size: var(--fs-h3); }
 
 strong {
   font-weight: 700;
 }
 
+.name {
+  margin: 0;
+  padding-top: 1.25rem;
+  font-size: var(--fs-h1);
+  font-weight: 700;
+}
+
 .papertitle {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: var(--fs-base);
 }
 
-.name {
-  padding-top: 20px;
-  margin: 0;
-  font-size: 2rem; /* ~32px */
-  font-weight: 700;
+
+/* =====================================================
+   LINKS (ACCESSIBLE + CLEAN)
+   ===================================================== */
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
-/* =========================
-   IMAGE / HOVER EFFECTS
-   ========================= */
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
 
-.one {
-  width: 160px;
-  height: 160px;
+a:focus-visible {
+  outline: 2px solid var(--color-link-hover);
+  outline-offset: 2px;
+}
+
+
+/* =====================================================
+   IMAGES / HOVER EFFECTS
+   ===================================================== */
+
+.image-wrapper {
   position: relative;
-}
-
-.two {
   width: 160px;
   height: 160px;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+  overflow: hidden;
 }
 
-.one:hover .two {
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.image-wrapper:hover .image-overlay {
   opacity: 1;
 }
 
 .fade {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity var(--transition-fast);
 }
 
-/* =========================
-   HIGHLIGHTS
-   ========================= */
 
-span.highlight {
-  background-color: #ffffd0;
-  padding: 0.1em 0.25em;
-  border-radius: 3px;
+/* =====================================================
+   HIGHLIGHT
+   ===================================================== */
+
+.highlight {
+  background-color: var(--color-highlight);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+
+/* =====================================================
+   RESPONSIVE IMPROVEMENTS
+   ===================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --fs-h1: 1.75rem;
+    --fs-h2: 1.375rem;
+    --fs-h3: 1.125rem;
+  }
+
+  .image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
 }
