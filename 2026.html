@@ -9,7 +9,7 @@
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="row">
                     <img style="padding:5%" width="100%"
-                         src="assets/img/foveated.png">
+                         src="assets/img/2026/foveated.png">
                     <br>
                     <span class="papertitle">Hybrid Foveated Path Tracing with Peripheral Gaussians for Immersive Anatomy</span>
                     <br>
@@ -51,6 +51,80 @@
                                 re-generating the peripheral model in under a second, eliminating extensive
                                 preprocessing and approximations. This opens new options for interactive medical
                                 visualization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="row">
+                    <img style="padding:5%" width="100%"
+                         src="assets/img/2026/multicam.png">
+                    <br>
+                    <span class="papertitle">MultiCam: On-the-fly Multi-Camera Pose Estimation Using Spatiotemporal Overlaps of Known Objects</span>
+                    <br>
+                    <div class="paper-authors">
+                        <span style="font-weight: lighter">S. Li, </span>
+                        <span>H. Schieber</span>,
+                        <span style="font-weight: lighter"> K. Waldow, B. Busam, J. Kreimeier, D. Roth</span>
+                    </div>
+                    <br>
+                    <span>Accepted · IEEE VR 2026 / IEEE TVCG</span>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseMulticam" role="button"
+                               aria-expanded="false" aria-controls="collapseMulticam">
+                                Abstract
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                            <a class="btn btn-dark w-100"
+                               href="https://arxiv.org/pdf/2603.22839">Arxiv</a></div>
+                    </div>
+                    <div class="collapse" id="collapseMulticam">
+                        <div class="card card-body">
+                            <p>
+                                Multi-camera dynamic Augmented Reality (AR) applications require a camera pose estimation to leverage individual information from each camera in one common system. This can be achieved by combining contextual information, such as markers or objects, across multiple views. While commonly cameras are calibrated in an initial step or updated through the constant use of markers, another option is to leverage information already present in the scene, like known objects. Another downside of marker-based tracking is that markers have to be tracked inside the field-of-view (FoV) of the cameras.
+To overcome these limitations, we propose a constant dynamic camera pose estimation leveraging spatiotemporal FoV overlaps of known objects on the fly. To achieve that, we enhance the state-of-the-art object pose estimator to update our spatiotemporal scene graph, enabling a relation even among non-overlapping FoV cameras. To evaluate our approach, we introduce a multi-camera, multi-object pose estimation dataset with temporal FoV overlap, including static and dynamic cameras. Furthermore, in FoV overlapping scenarios, we outperform the state-of-the-art on the widely used YCB-V and T-LESS dataset in camera pose accuracy. Our performance on both previous and our proposed datasets validates the effectiveness of our marker-less approach for AR applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="row">
+                    <img style="padding:5%" width="100%"
+                         src="assets/img/2026/thermal2.png">
+                    <br>
+                    <span class="papertitle">Supercharging Thermal Gaussian Splatting with Depth Estimation</span>
+                    <br>
+                    <div class="paper-authors">
+                        <span style="font-weight: lighter">M. Biswanath,* C. Cai* </span>
+                        <span>H. Schieber</span>,
+                        <span style="font-weight: lighter">D. Roth, B. Busam,</span>
+                        <pan> <em>*denotes equal contribution</em></pan>
+                    </div>
+                    <br>
+                    <span>Accepted · ISPRS Congress 2026</span>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseThermal" role="button"
+                               aria-expanded="false" aria-controls="collapseThermal">
+                                Abstract
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse" id="collapseThermal">
+                        <div class="card card-body">
+                            <p>
+                                Efficient and robust 3D scene representation is crucial in autonomous driving, robotics, and related fields. While RGB images provide valuable content for 3D reconstruction, other modalities like thermal or depth can enable additional
+information on the 3D environment. Lately, novel view synthesis methods like 3D Gaussian Splatting have started using multiple modalities to further boost their performance. But fusing or combining multi-modal data can make the process slower and can bring in additional challenges.
+Therefore, our project aims to use a single modality based on the thermal infrared domain, by removing the reliance on visible
+light as much as possible. This single modality can be expected to be faster as it does not rely on multimodal data. We propose a method, TDg, that uses only thermal images and depth estimation in its architecture to derive the thermal radiance fields. Our TDg method outperforms the MSMG (Multiple Single-Modal Gaussians) baseline in most cases on our test datasets, RGBT-Scenes and ThermalMix. On average,
+the rendering quality metrics such as LPIPS, SSIM, and PSNR of TDg are 1.12%, 0.034%, and 0.01% better than the baseline MSMG values. It also reduces the training time significantly, by 12 mins 47 secs (55% improvement). Overall, our method is successful
+in deriving these 3D thermal models/radiance fields, which can ultimately have several applications, such as identifying heat
+sources critical in surveillance, search or rescue operations, and industrial inspections where temperature is widely used to monitor machines.
                             </p>
                         </div>
                     </div>
