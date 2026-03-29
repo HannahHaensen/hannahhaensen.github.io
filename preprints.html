@@ -1,72 +1,133 @@
-    <section>
-        <br>
-        <div class="container">
+<section id="Preprints" class="mb-5">
+    <div class="container">
 
-            <hr>
-            <h4 id="Preprints">Preprints</h4>
-            <hr>
-            <!-- -->
+        <hr>
+        <h2 class="mb-4">Preprints</h2>
 
-            <div class="row" style="">
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/core.png">
-                </div>
-                <div  class="col-lg-8 col-md-8 col-sm-12" style="padding:2%">
-                    <span class="papertitle">CoRe-GS: Coarse-to-Refined Gaussian Splatting with Semantic Object Focus</span>
-                    <br>
-                    <span>H. Schieber</span>, <span style="font-weight: lighter"> D. Frischmann, S. Boche, V. Schaack, A. Schoellig, S. Leutenegger, and D. Roth</span>
-                    <br>
-                    <em></em>2025
-                    <br>
-                    <p class="d-inline-flex gap-1">
-                        <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseCoRe" role="button"
-                           aria-expanded="false" aria-controls="collapseCoRe">
-                            Abstract
-                        </a>
-                        <a class="btn btn-dark"
-                           href="https://arxiv.org/abs/2509.04859">Arxiv</a>
-                    </p>
-                    <div class="collapse" id="collapseCoRe">
-                        <div class="card card-body">
-                            <p>
-                                Mobile reconstruction for autonomous aerial robotics holds strong potential for critical applications such as tele-guidance and disaster response. These tasks demand both accurate 3D reconstruction and fast scene processing. Instead of reconstructing the entire scene in detail, it is often more efficient to focus on specific objects, i.e., points of interest (PoIs). Mobile robots equipped with advanced sensing can usually detect these early during data acquisition or preliminary analysis, reducing the need for full-scene optimization. Gaussian Splatting (GS) has recently shown promise in delivering high-quality novel view synthesis and 3D representation by an incremental learning process. Extending GS with scene editing, semantics adds useful per-splat features to isolate objects effectively.
-Semantic 3D Gaussian editing can already be achieved before the full training cycle is completed, reducing the overall training time. Moreover, the semantically relevant area, the PoI, is usually already known during capturing. To balance high-quality reconstruction with reduced training time, we propose CoRe-GS. We first generate a coarse segmentation-ready scene with semantic GS and then refine it for the semantic object using our novel color-based effective filtering for effective object isolation. This is speeding up the training process to be about a quarter less than a full training cycle for semantic GS. We evaluate our approach on two datasets, SCRREAM (real-world, outdoor) and NeRDS 360 (synthetic, indoor), showing reduced runtime and higher novel-view-synthesis quality.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--  -->
-            <div class="row" style="">
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/img.png">
-                </div>
-                <div  class="col-lg-8 col-md-8 col-sm-12" style="padding:2%">
-                    <span class="papertitle">Locality-Sensitive Hashing for Efficient Hard Negative Contrastive Learning</span>
-                    <br>
-                    <span style="font-weight: lighter"> F. Deuser, P. Hausenblas </span><span>H. Schieber</span>, <span style="font-weight: lighter"> D. Roth, M. Werner, and N. Oswald</span>
-                    <br>
-                    <em></em>2025
-                    <br>
-                    <p class="d-inline-flex gap-1">
-                        <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseLSH" role="button"
-                           aria-expanded="false" aria-controls="collapseLSH">
-                            Abstract
-                        </a>
-                        <a class="btn btn-dark"
-                           href="https://arxiv.org/pdf/2505.17844">Arxiv</a>
-                    </p>
-                    <div class="collapse" id="collapseLSH">
-                        <div class="card card-body">
-                            <p>
-                                Contrastive learning is a representational learning paradigm in which a neural network maps data elements to feature vectors. It improves the feature space by forming lots with an anchor and examples that are either positive or negative based on class similarity. Hard negative examples, which are close to the anchor in the feature space but from a different class, improve learning performance. Finding such examples of high quality efficiently in large, high-dimensional datasets is computationally challenging. In this paper, we propose a GPU-friendly Locality-Sensitive Hashing (LSH) scheme that quantizes real-valued feature vectors into binary representations for approximate nearest neighbor search. We investigate its theoretical properties and evaluate it on several datasets from textual and visual domain. Our approach achieves comparable or better performance while requiring significantly less computation than existing hard negative mining strategies.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <!-- ===================== PAPER 1 ===================== -->
+        <div class="row align-items-center mb-5">
+
+            <div class="col-lg-4 text-center">
+                <img src="assets/img/core.png"
+                     class="img-fluid p-3"
+                     alt="CoRe-GS preview image">
             </div>
 
+            <div class="col-lg-8">
+
+                <h5 class="papertitle">
+                    CoRe-GS: Coarse-to-Refined Gaussian Splatting with Semantic Object Focus
+                </h5>
+
+                <p class="mb-1">
+                    <strong>H. Schieber</strong>,
+                    D. Frischmann, S. Boche, V. Schaack,
+                    A. Schoellig, S. Leutenegger, D. Roth
+                </p>
+
+                <p class="text-muted mb-2">2025</p>
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <a class="btn btn-dark btn-sm"
+                       data-bs-toggle="collapse"
+                       href="#collapseCoRe"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="collapseCoRe">
+                        Abstract
+                    </a>
+
+                    <a class="btn btn-dark btn-sm"
+                       href="https://hannahhaensen.github.io/core-gs/"
+                       target="_blank"
+                       rel="noopener">
+                        Project Page
+                    </a>
+
+                    <a class="btn btn-dark btn-sm"
+                       href="https://arxiv.org/abs/2509.04859"
+                       target="_blank"
+                       rel="noopener">
+                        ArXiv
+                    </a>
+                </div>
+
+                <!-- Abstract Collapse -->
+                <div class="collapse" id="collapseCoRe">
+                    <div class="card card-body small">
+                        <p class="mb-0">
+                            Mobile reconstruction for autonomous aerial robotics holds strong potential for critical
+                            applications such as tele-guidance and disaster response. These tasks demand accurate
+                            3D reconstruction and fast scene processing.
+                            <br><br>
+                            We propose <strong>CoRe-GS</strong>, a coarse-to-refined semantic Gaussian Splatting
+                            approach that focuses reconstruction on semantically relevant points of interest,
+                            reducing training time.
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </section>
+
+        <!-- ===================== PAPER 2 ===================== -->
+        <div class="row align-items-center mb-5">
+
+            <div class="col-lg-4 text-center">
+                <img src="assets/img/img.png"
+                     class="img-fluid p-3"
+                     alt="LSH hard negative mining illustration">
+            </div>
+
+            <div class="col-lg-8">
+
+                <h5 class="papertitle">
+                    Locality-Sensitive Hashing for Efficient Hard Negative Contrastive Learning
+                </h5>
+
+                <p class="mb-1">
+                    F. Deuser, P. Hausenblas,
+                    <strong>H. Schieber</strong>,
+                    D. Roth, M. Werner, N. Oswald
+                </p>
+
+                <p class="text-muted mb-2">2025</p>
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <a class="btn btn-dark btn-sm"
+                       data-bs-toggle="collapse"
+                       href="#collapseLSH"
+                       role="button"
+                       aria-expanded="false"
+                       aria-controls="collapseLSH">
+                        Abstract
+                    </a>
+                    <a class="btn btn-dark btn-sm"
+                       href="https://arxiv.org/pdf/2505.17844"
+                       target="_blank"
+                       rel="noopener">
+                        ArXiv
+                    </a>
+                </div>
+                <!-- Abstract Collapse -->
+                <div class="collapse" id="collapseLSH">
+                    <div class="card card-body small">
+                        <p class="mb-0">
+                            We propose a GPU-friendly Locality-Sensitive Hashing (LSH) scheme
+                            for efficient hard negative mining in contrastive learning.
+                            <br><br>
+                            Our method quantizes real-valued feature vectors into binary
+                            representations enabling approximate nearest neighbor search.
+                            <br><br>
+                            It achieves comparable or better performance with significantly
+                            reduced computational cost across textual and visual datasets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
