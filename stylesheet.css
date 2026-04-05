@@ -46,6 +46,7 @@ footer {
     width: 100%;
     background: #fff;
     border: 1px solid #e9ecef;
+    padding: 10px;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
