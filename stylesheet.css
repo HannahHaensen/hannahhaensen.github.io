@@ -1,78 +1,211 @@
-.pub-row {
-  row-gap: 2rem;
+body {
+    line-height: 1.7;
 }
 
-.pub-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+section {
+    margin-top: 4rem;
 }
 
-.pub-image {
-  width: 100%;
-  margin-bottom: 0;
+.name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
 }
 
-.pub-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 5%;
+.subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-.pub-body {
-  margin-bottom: 0;
+.profile-img {
+    max-width: 220px;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-.pub-body .papertitle {
-  display: block;
-  margin-bottom: 0.5rem;
+footer {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Paper section */
+
+.paper-row {
+    align-items: stretch;
+}
+
+.paper-col {
+    display: flex;
+}
+
+.paper-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paper-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+.paper-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.paper-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.paper-card.highlight {
+    border: 1px solid #198754; /* Bootstrap success green */
+    box-shadow: 0 6px 20px rgba(25, 135, 84, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* top accent bar */
+.paper-card.highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #198754;
+}
+
+/* optional: slightly stronger title */
+.paper-card.highlight .papertitle {
+    font-weight: 700;
+}
+
+.papertitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.45;
+    margin-bottom: 0.75rem;
+    color: #111;
 }
 
 .paper-authors {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-  white-space: normal;
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: #555;
+    margin-bottom: 0.75rem;
 }
 
-.paper-authors span {
-  display: inline;
+.paper-venue {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #6c757d;
+    margin-bottom: 1rem;
 }
 
-.pub-meta {
-  display: block;
-  line-height: 1.5;
+.paper-actions {
+    margin-top: auto;
 }
 
-.pub-links {
-  row-gap: 0.5rem;
+.paper-actions .btn {
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
 }
 
-.pub-links > [class*="col-"] {
-  display: flex;
+.paper-collapse {
+    margin-top: 1rem;
 }
 
-.pub-links .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.5rem;
+.paper-collapse .card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    background: #f8f9fa;
+    box-shadow: none;
 }
 
-.pub-card .collapse {
-  margin-top: 0.75rem;
+.paper-collapse .card-body {
+    padding: 0.9rem 1rem;
 }
 
-.pub-card .card-body p:last-child {
-  margin-bottom: 0;
+.paper-collapse p {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #333;
 }
 
-@media (min-width: 768px) {
-  .row.pub-row > [class*="col-"] {
-    display: flex;
-  }
+/* Optional: highlighted badge refinement */
+.badge.bg-success {
+    background-color: #dff3e4 !important;
+    color: #1f6b3b !important;
+    border: 1px solid #b7dfc2;
+}
 
-  .row.pub-row > [class*="col-"] > .pub-card {
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+    .paper-card-body {
+        padding: 0.9rem;
+    }
+
+    .papertitle {
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .paper-actions .btn {
+        font-size: 0.88rem;
+        padding: 0.5rem 0.65rem;
+    }
+}
+
+.paper-card.highlight {
+    background: #198754;
+    color: white;
+    border: 1px solid #198754;
+    box-shadow: 0 6px 20px rgba(25, 135, 84, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-card.highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-  }
+    height: 4px;
 }
+
+.paper-card.highlight .papertitle,
+.paper-card.highlight .paper-authors,
+.paper-card.highlight .paper-venue,
+.paper-card.highlight .paper-collapse p {
+    color: white;
+}
+
+.paper-card.highlight .paper-collapse .card {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.paper-card.highlight .btn.btn-dark {
+    background: white;
+    color: #198754;
+    border-color: white;
+}
+

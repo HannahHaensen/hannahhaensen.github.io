@@ -5,540 +5,566 @@
         <h4 id="2024">2024</h4>
         <hr>
 
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/dynamon.png">
-                    <br>
-                    <span class="papertitle">DynaMoN: Motion-Aware Fast And Robust Camera Localization for Dynamic Neural Radiance Fields</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span style="font-weight: lighter">N. Schischka*</span>,
-                        <span>H. Schieber*</span>,
-                        <span style="font-weight: lighter"> M. A. Karaoglu*, M. Görgülü, F. Grötzner, A. Ladikos, D. Roth, N. Navab and B. Busam, <br> <em>*denotes equal contribution</em></span>
+        <div class="row g-4 paper-row">
+
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/dynamon.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">DynaMoN: Motion-Aware Fast And Robust Camera Localization for Dynamic Neural Radiance Fields</div>
+
+                        <div class="paper-authors">
+                            <span style="font-weight: lighter">N. Schischka*</span>,
+                            <span>H. Schieber*</span>,
+                            <span style="font-weight: lighter"> M. A. Karaoglu*, M. Görgülü, F. Grötzner, A. Ladikos, D. Roth, N. Navab and B. Busam, <br> <em>*denotes equal contribution</em></span>
+                        </div>
+
+                        <div class="paper-venue">IEEE RA-L · IEEE ICRA 2025</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseDynamon" role="button"
+                                   aria-expanded="false" aria-controls="collapseDynamon">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://arxiv.org/pdf/2309.08927.pdf">Arxiv</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://ieeexplore.ieee.org/document/10777295">IEEE RA-L</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://hannahhaensen.github.io/DynaMoN/">Website</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseDynamon">
+                            <div class="card card-body">
+                                <p>
+                                    Dynamic reconstruction with neural radiance fields (NeRF) requires accurate camera poses.
+                                    These are often hard to retrieve with existing structure-from-motion (SfM) pipelines as
+                                    both camera and scene content can change. We propose DynaMoN that leverages simultaneous
+                                    localization and mapping (SLAM) jointly with motion masking to handle dynamic scene content.
+                                    Our robust SLAM-based tracking module significantly accelerates the training process of the
+                                    dynamic NeRF while improving the quality of synthesized views at the same time. Extensive
+                                    experimental validation on TUM RGB-D, BONN RGB-D Dynamic and the DyCheck's iPhone dataset,
+                                    three real-world datasets, shows the advantages of DynaMoN both for camera pose estimation
+                                    and novel view synthesis.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    <span>IEEE RAL · IEEE ICRA 2025</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseDynamon" role="button"
-                               aria-expanded="false" aria-controls="collapseDynamon">
-                                Abstract
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://arxiv.org/pdf/2309.08927.pdf">Arxiv</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://ieeexplore.ieee.org/document/10777295">IEEE RA-L</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://hannahhaensen.github.io/DynaMoN/">Website</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseDynamon">
-                        <div class="card card-body">
-                            <p>
-                                Dynamic reconstruction with neural radiance fields (NeRF) requires accurate camera poses.
-                                These are often hard to retrieve with existing structure-from-motion (SfM) pipelines as
-                                both camera and scene content can change. We propose DynaMoN that leverages simultaneous
-                                localization and mapping (SLAM) jointly with motion masking to handle dynamic scene content.
-                                Our robust SLAM-based tracking module significantly accelerates the training process of the
-                                dynamic NeRF while improving the quality of synthesized views at the same time. Extensive
-                                experimental validation on TUM RGB-D, BONN RGB-D Dynamic and the DyCheck's iPhone dataset,
-                                three real-world datasets, shows the advantages of DynaMoN both for camera pose estimation
-                                and novel view synthesis.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/nerftrinsic.png">
-                    <br>
-                    <span class="papertitle">NeRFtrinsic Four: An End-To-End Trainable NeRF Jointly Optimizing Diverse Intrinsic and Extrinsic Camera Parameters</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span>H. Schieber</span>,
-                        <span style="font-weight: lighter"> F. Deuser, B. Egger, N. Oswald and D. Roth</span>
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col highlight">
+               <article class="paper-card highlight">
+                    <img class="paper-img" width="100%" src="assets/img/2024/nerftrinsic.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">NeRFtrinsic Four: An End-To-End Trainable NeRF Jointly Optimizing Diverse Intrinsic and Extrinsic Camera Parameters</div>
+
+                        <div class="paper-authors">
+                            <span>H. Schieber</span>,
+                            <span style="font-weight: lighter"> F. Deuser, B. Egger, N. Oswald and D. Roth</span>
+                        </div>
+
+                        <div class="paper-venue">Elsevier Computer Vision and Image Understanding (CVIU) · 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseNerftrinsic"
+                                   role="button"
+                                   aria-expanded="false" aria-controls="collapseNerftrinsic">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://arxiv.org/pdf/2303.09412.pdf">Arxiv</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://www.sciencedirect.com/science/article/pii/S107731422400287X">Elsevier CVIU</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://hannahhaensen.github.io/nerftrinsic_four/">Website</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseNerftrinsic">
+                            <div class="card card-body">
+                                <p>
+                                    We utilize Gaussian Fourier features to estimate extrinsic camera parameters and
+                                    dynamically predict varying intrinsic camera parameters through the supervision of the
+                                    projection error. Our approach outperforms existing joint optimization methods on LLFF and
+                                    BLEFF. In addition to these existing datasets, we introduce a new dataset called iFF with
+                                    varying intrinsic camera parameters. NeRFtrinsic Four is a step forward in joint optimization
+                                    NeRF-based view synthesis and enables more realistic and flexible rendering in real-world
+                                    scenarios with varying camera parameters.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    <span>CVIU 2024</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseNerftrinsic"
-                               role="button"
-                               aria-expanded="false" aria-controls="collapseNerftrinsic">
-                                Abstract
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://arxiv.org/pdf/2303.09412.pdf">Arxiv</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://www.sciencedirect.com/science/article/pii/S107731422400287X">CVIU</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://hannahhaensen.github.io/nerftrinsic_four/">Website</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseNerftrinsic">
-                        <div class="card card-body">
-                            <p>
-                                We utilize Gaussian Fourier features to estimate extrinsic camera parameters and
-                                dynamically predict varying intrinsic camera parameters through the supervision of the
-                                projection error. Our approach outperforms existing joint optimization methods on LLFF and
-                                BLEFF. In addition to these existing datasets, we introduce a new dataset called iFF with
-                                varying intrinsic camera parameters. NeRFtrinsic Four is a step forward in joint optimization
-                                NeRF-based view synthesis and enables more realistic and flexible rendering in real-world
-                                scenarios with varying camera parameters.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/neural.png">
-                    <br>
-                    <span class="papertitle">Neural Motion Tracking: Formative Evaluation of Zero Latency Rendering</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span style="font-weight: lighter">D. Roth, V. Bräutigam, N. Joshi, C. Kleinbeck, </span>
-                        <span>H. Schieber</span>,
-                        <span style="font-weight: lighter"> and J. Kreimeier</span>
-                    </div>
-                    <br>
-                    <span>ACM Symposium on Virtual Reality Software and Technology (VRST '24) 2024</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseNeuralTracking"
-                               role="button"
-                               aria-expanded="false" aria-controls="collapseNeuralTracking">
-                                Abstract
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://dl.acm.org/doi/10.1145/3641825.3687751">ACM</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseNeuralTracking">
-                        <div class="card card-body">
-                            <p>
-                                Low motion-to-photon latencies between physical movement and rendering updates are crucial
-                                for an immersive virtual reality (VR) experience and to avoidusers’ discomfort and sickness.
-                                Current methods aim to minimize the delay between the motion measurement and rendering at
-                                the cost of increasing technical complexity and possibly decreasing accuracy. By relying on
-                                capturing physical motion, these strategies will, by nature, not result in zero latency
-                                rendering or will be based on prediction and resulting uncertainty. This paper presents and
-                                evaluates a novel alternative and proof of principle for VR motion tracking that could
-                                enable motion-to-photon latencies of zero and below zero in time. We termed our concept
-                                Neural Motion Tracking, which we define as the sensing and assessment of motion through
-                                human neural activation of the somatic nervous system. In contrast to measuring physical
-                                activity, the key principle is that we aim to utilize the physiological timeframe between a
-                                user’s intention and the execution of motion. We aim to foresee upcoming motion ahead of the
-                                physical movement, by sampling preceding electromyographic signals before the muscle
-                                activation. The electromechanical delay (EMD) between potential change in the muscle
-                                activation and actual physical movement opens a gap in which measurement can be taken and
-                                evaluated before the physical motion. In a first proof of principle, we evaluated the
-                                concept with two activities, arm bending and head rotation, measured with a binary
-                                activation measure. Our results indicate that it is possible to predict movement and update
-                                a rendering up to 2 ms before its physical execution, which is assessed by optical tracking
-                                after approximately 4 ms. However, to make the best use of this advantage, electromyography
-                                (EMG) sensor data should be as high quality as possible (i.e., low noise and from
-                                muscle-near electrodes). Our results empirically quantify this characteristic for the first
-                                time when compared to state-of-the-art optical tracking systems for VR. We discuss our
-                                results and potential pathways to motivate further work toward marker- and latency-less
-                                motion tracking.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/neural.png">
 
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/asdf.png">
-                    <br>
-                    <span class="papertitle">ASDF: Assembly State Detection Utilizing Late Fusion by Integrating 6D Pose Estimation</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span>H. Schieber</span>,
-                        <span style="font-weight: lighter"> S. Li, N. Correl, P. Beckerle, J. Kreimeier, and D. Roth</span>
-                    </div>
-                    <br>
-                    <span>IEEE ISMAR 2024 · Conference Paper</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseASDF" role="button"
-                               aria-expanded="false" aria-controls="collapseASDF">
-                                Abstract
-                            </a>
+                    <div class="paper-card-body">
+                        <div class="papertitle">Neural Motion Tracking: Formative Evaluation of Zero Latency Rendering</div>
+
+                        <div class="paper-authors">
+                            <span style="font-weight: lighter">D. Roth, V. Bräutigam, N. Joshi, C. Kleinbeck, </span>
+                            <span>H. Schieber</span>,
+                            <span style="font-weight: lighter"> and J. Kreimeier</span>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10765472">IEEE</a>
+
+                        <div class="paper-venue">ACM Symposium on Virtual Reality Software and Technology (VRST '24) 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseNeuralTracking"
+                                   role="button"
+                                   aria-expanded="false" aria-controls="collapseNeuralTracking">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://dl.acm.org/doi/10.1145/3641825.3687751">ACM</a>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://arxiv.org/pdf/2403.16400.pdf">Arxiv</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://hex-lab.io/asdf/">Website</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseASDF">
-                        <div class="card card-body">
-                            <p>
-                                In medical and industrial domains, providing guidance for assembly processes is critical
-                                to ensure efficiency and safety. Errors in assembly can lead to significant consequences
-                                such as extended surgery times, and prolonged manufacturing or maintenance times in
-                                industry. Assembly scenarios can benefit from in-situ AR visualization to provide guidance,
-                                reduce assembly times and minimize errors. To enable in-situ visualization 6D pose
-                                estimation can be leveraged. Existing 6D pose estimation techniques primarily focus on
-                                individual objects and static captures. However, assembly scenarios have various dynamics
-                                including occlusion during assembly and dynamics in the assembly objects appearance.
-                                Existing work, combining object detection/6D pose estimation and assembly state detection
-                                focuses either on pure deep learning-based approaches, or limit the assembly state
-                                detection to building blocks. To address the challenges of 6D pose estimation in
-                                combination with assembly state detection, our approach ASDF builds upon the strengths of
-                                YOLOv8, a real-time capable object detection framework. We extend this framework, refine
-                                the object pose and fuse pose knowledge with network-detected pose information. Utilizing
-                                our late fusion in our Pose2State module results in refined 6D pose estimation and
-                                assembly state detection. By combining both pose and state information, our Pose2State
-                                module predicts the final assembly state with precision. Our evaluation on our \ac{asdf}
-                                dataset shows that our Pose2State module leads to an improved assembly state detection and
-                                that the improvement of the assembly state further leads to a more robust 6D pose
-                                estimation. Moreover, on the GBOT dataset, we outperform the pure deep learning-based
-                                network, and even outperform the hybrid and pure tracking-based approaches.
-                            </p>
+
+                        <div class="collapse paper-collapse" id="collapseNeuralTracking">
+                            <div class="card card-body">
+                                <p>
+                                    Low motion-to-photon latencies between physical movement and rendering updates are crucial
+                                    for an immersive virtual reality (VR) experience and to avoidusers’ discomfort and sickness.
+                                    Current methods aim to minimize the delay between the motion measurement and rendering at
+                                    the cost of increasing technical complexity and possibly decreasing accuracy. By relying on
+                                    capturing physical motion, these strategies will, by nature, not result in zero latency
+                                    rendering or will be based on prediction and resulting uncertainty. This paper presents and
+                                    evaluates a novel alternative and proof of principle for VR motion tracking that could
+                                    enable motion-to-photon latencies of zero and below zero in time. We termed our concept
+                                    Neural Motion Tracking, which we define as the sensing and assessment of motion through
+                                    human neural activation of the somatic nervous system. In contrast to measuring physical
+                                    activity, the key principle is that we aim to utilize the physiological timeframe between a
+                                    user’s intention and the execution of motion. We aim to foresee upcoming motion ahead of the
+                                    physical movement, by sampling preceding electromyographic signals before the muscle
+                                    activation. The electromechanical delay (EMD) between potential change in the muscle
+                                    activation and actual physical movement opens a gap in which measurement can be taken and
+                                    evaluated before the physical motion. In a first proof of principle, we evaluated the
+                                    concept with two activities, arm bending and head rotation, measured with a binary
+                                    activation measure. Our results indicate that it is possible to predict movement and update
+                                    a rendering up to 2 ms before its physical execution, which is assessed by optical tracking
+                                    after approximately 4 ms. However, to make the best use of this advantage, electromyography
+                                    (EMG) sensor data should be as high quality as possible (i.e., low noise and from
+                                    muscle-near electrodes). Our results empirically quantify this characteristic for the first
+                                    time when compared to state-of-the-art optical tracking systems for VR. We discuss our
+                                    results and potential pathways to motivate further work toward marker- and latency-less
+                                    motion tracking.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src=assets/img/2024/teaserVG.png">
-                    <br>
-                    <span class="papertitle">Visual Guidance for Assembly Processes</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span style="font-weight: lighter">J. Kreimeier, </span>
-                        <span>H. Schieber</span>,
-                        <span style="font-weight: lighter"> S. Li, A. Martin-Gomez, and D. Roth</span>
-                    </div>
-                    <br>
-                    <span>IEEE ISMAR 2024 · Demo Paper</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseDemo" role="button"
-                               aria-expanded="false" aria-controls="collapseDemo">
-                                Abstract
-                            </a>
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/asdf.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">ASDF: Assembly State Detection Utilizing Late Fusion by Integrating 6D Pose Estimation</div>
+
+                        <div class="paper-authors">
+                            <span>H. Schieber</span>,
+                            <span style="font-weight: lighter"> S. Li, N. Correl, P. Beckerle, J. Kreimeier, and D. Roth</span>
+                        </div>
+
+                        <div class="paper-venue">IEEE International Symposium on Mixed and Augmented Reality (ISMAR) 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseASDF" role="button"
+                                   aria-expanded="false" aria-controls="collapseASDF">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10765472">IEEE</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://arxiv.org/pdf/2403.16400.pdf">Arxiv</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://hex-lab.io/asdf/">Website</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseASDF">
+                            <div class="card card-body">
+                                <p>
+                                    In medical and industrial domains, providing guidance for assembly processes is critical
+                                    to ensure efficiency and safety. Errors in assembly can lead to significant consequences
+                                    such as extended surgery times, and prolonged manufacturing or maintenance times in
+                                    industry. Assembly scenarios can benefit from in-situ AR visualization to provide guidance,
+                                    reduce assembly times and minimize errors. To enable in-situ visualization 6D pose
+                                    estimation can be leveraged. Existing 6D pose estimation techniques primarily focus on
+                                    individual objects and static captures. However, assembly scenarios have various dynamics
+                                    including occlusion during assembly and dynamics in the assembly objects appearance.
+                                    Existing work, combining object detection/6D pose estimation and assembly state detection
+                                    focuses either on pure deep learning-based approaches, or limit the assembly state
+                                    detection to building blocks. To address the challenges of 6D pose estimation in
+                                    combination with assembly state detection, our approach ASDF builds upon the strengths of
+                                    YOLOv8, a real-time capable object detection framework. We extend this framework, refine
+                                    the object pose and fuse pose knowledge with network-detected pose information. Utilizing
+                                    our late fusion in our Pose2State module results in refined 6D pose estimation and
+                                    assembly state detection. By combining both pose and state information, our Pose2State
+                                    module predicts the final assembly state with precision. Our evaluation on our \ac{asdf}
+                                    dataset shows that our Pose2State module leads to an improved assembly state detection and
+                                    that the improvement of the assembly state further leads to a more robust 6D pose
+                                    estimation. Moreover, on the GBOT dataset, we outperform the pure deep learning-based
+                                    network, and even outperform the hybrid and pure tracking-based approaches.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="collapse" id="collapseDemo">
-                        <div class="card card-body">
-                            <p>
-                                Augmented reality (AR) can improve users' efficiency in various tasks. AR allows to guide
-                                a user with superimposed information, for example, during an assembly process. While
-                                paper-based assembly instructions are cumbersome and time-consuming, deep-learning driven
-                                AR-based instructions can dynamically adapt to the assembly scene and augmented 3D
-                                information over the physical objects (in-situ). We present KARVIMIO, an AR assembly
-                                guidance application for instruments based on 3D printed parts as reproducible testbed.
-                                Our approach utilizes purely synthetic training data for pose estimation to allow an easy
-                                generalization of the approach to new assembly groups and other areas of use.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/h6d.png">
-                    <br>
-                    <span class="papertitle">HouseCat6D--A Large-Scale Multi-Modal Category Level 6D Object Pose Dataset with Household Objects in Realistic Scenarios</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span style="font-weight: lighter">H. Jung*, G. Zhai*, S.-C. Wu*, P. Ruhkamp*, </span>
-                        <span>H. Schieber*</span>
-                        <span style="font-weight: lighter">, P. Wang, G. Rizzoli, H. Zhao, S. D. Meier, D. Roth, N. Navab and B. Busam, *denotes equal contribution</span>
-                    </div>
-                    <br>
-                    <span>CVPR 2024 · Highlight</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseHousecat6d" role="button"
-                               aria-expanded="false" aria-controls="collapseHousecat6d">
-                                Abstract
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://arxiv.org/pdf/2212.10428.pdf">Arxiv</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://sites.google.com/view/housecat6d">Website</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://sites.google.com/view/housecat6d/dataset">Dataset</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://github.com/Junggy/HouseCat6D">Toolbox</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseHousecat6d">
-                        <div class="card card-body">
-                            <p>
-                                Estimating 6D object poses is a major challenge in 3D computer vision. Building on
-                                successful instance-level approaches, research is shifting towards category-level pose
-                                estimation for practical applications. Current category-level datasets, however, fall
-                                short in annotation quality and pose variety. Addressing this, we introduce HouseCat6D,
-                                a new category-level 6D pose dataset. It features 1) multi-modality with Polarimetric
-                                RGB and Depth (RGBD+P), 2) encompasses 194 diverse objects across 10 household
-                                categories, including two photometrically challenging ones, and 3) provides high-quality
-                                pose annotations with an error range of only 1.35 mm to 1.74 mm. The dataset also
-                                includes 4) 41 large-scale scenes with comprehensive viewpoint and occlusion coverage,
-                                5) a checkerboard-free environment, and 6) dense 6D parallel-jaw robotic grasp
-                                annotations. Additionally, we present benchmark results for leading category-level pose
-                                estimation networks.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/teaserVG.png">
 
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/gbot.png">
-                    <br>
-                    <span class="papertitle">GBOT: Graph-Based 3D Object Tracking for Augmented Reality-Assisted Assembly Guidance</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span style="font-weight: lighter">S. Li, </span>
-                        <span>H. Schieber</span>
-                        <span style="font-weight: lighter">, B. Egger, J. Kreimeier and D. Roth</span>
-                    </div>
-                    <br>
-                    <span>IEEE VR 2024 · Conference Paper</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseGBOT" role="button"
-                               aria-expanded="false" aria-controls="collapseGBOT">
-                                Abstract
-                            </a>
+                    <div class="paper-card-body">
+                        <div class="papertitle">Visual Guidance for Assembly Processes</div>
+
+                        <div class="paper-authors">
+                            <span style="font-weight: lighter">J. Kreimeier, </span>
+                            <span>H. Schieber</span>,
+                            <span style="font-weight: lighter"> S. Li, A. Martin-Gomez, and D. Roth</span>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://arxiv.org/abs/2402.07677">Arxiv</a>
+
+                        <div class="paper-venue">IEEE IEEE International Symposium on Mixed and Augmented Reality (ISMAR) 2024 · Demo Paper</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseDemo" role="button"
+                                   aria-expanded="false" aria-controls="collapseDemo">
+                                    Abstract
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://github.com/roth-hex-lab/gbot">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseGBOT">
-                        <div class="card card-body">
-                            <p>
-                                Guidance for assemblable parts is a promising field for augmented reality. Augmented reality
-                                assembly guidance requires 6D object poses of target objects in real time. Especially in
-                                time-critical medical or industrial settings, continuous and markerless tracking of
-                                individual parts is essential to visualize instructions superimposed on or next to the
-                                target object parts. In this regard, occlusions by the user's hand or other objects and the
-                                complexity of different assembly states complicate robust and real-time markerless
-                                multi-object tracking. To address this problem, we present Graph-based Object Tracking
-                                (GBOT), a novel graph-based single-view RGB-D tracking approach. The real-time markerless
-                                multi-object tracking is initialized via 6D pose estimation and updates the graph-based
-                                assembly poses. The tracking through various assembly states is achieved by our novel
-                                multi-state assembly graph. We update the multi-state assembly graph by utilizing the
-                                relative poses of the individual assembly parts. Linking the individual objects in this
-                                graph enables more robust object tracking during the assembly process. For evaluation, we
-                                introduce a synthetic dataset of publicly available and 3D printable assembly assets as a
-                                benchmark for future work. Quantitative experiments in synthetic data and further
-                                qualitative study in real test data show that GBOT can outperform existing work towards
-                                enabling context-aware augmented reality assembly guidance. Dataset and code will be made
-                                publically available.
-                            </p>
+
+                        <div class="collapse paper-collapse" id="collapseDemo">
+                            <div class="card card-body">
+                                <p>
+                                    Augmented reality (AR) can improve users' efficiency in various tasks. AR allows to guide
+                                    a user with superimposed information, for example, during an assembly process. While
+                                    paper-based assembly instructions are cumbersome and time-consuming, deep-learning driven
+                                    AR-based instructions can dynamically adapt to the assembly scene and augmented 3D
+                                    information over the physical objects (in-situ). We present KARVIMIO, an AR assembly
+                                    guidance application for instruments based on 3D printed parts as reproducible testbed.
+                                    Our approach utilizes purely synthetic training data for pose estimation to allow an easy
+                                    generalization of the approach to new assembly groups and other areas of use.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/handreha.png">
-                    <br>
-                    <span class="papertitle">Towards Continuous Patient Care with Remote Guided VR-Therapy (Poster)</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span style="font-weight: lighter">J. Kreimeier, </span>
-                        <span>H. Schieber</span>
-                        <span style="font-weight: lighter">, N. Lewis, M. Smietana, J. Reithmeier, V. Cnejevici, P. Prasad, A. Eid, M. Maier, D. Roth</span>
-                    </div>
-                    <br>
-                    <span>IEEE VR 2024 · Poster</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseVRReha" role="button"
-                               aria-expanded="false" aria-controls="collapseVRReha">
-                                Abstract
-                            </a>
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/h6d.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">HouseCat6D--A Large-Scale Multi-Modal Category Level 6D Object Pose Dataset with Household Objects in Realistic Scenarios</div>
+
+                        <div class="paper-authors">
+                            <span style="font-weight: lighter">H. Jung*, G. Zhai*, S.-C. Wu*, P. Ruhkamp*, </span>
+                            <span>H. Schieber*</span>
+                            <span style="font-weight: lighter">, P. Wang, G. Rizzoli, H. Zhao, S. D. Meier, D. Roth, N. Navab and B. Busam, *denotes equal contribution</span>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://ieeexplore.ieee.org/abstract/document/10536420">IEEE</a>
+
+                        <div class="paper-venue">CVPR 2024 · Highlight</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseHousecat6d" role="button"
+                                   aria-expanded="false" aria-controls="collapseHousecat6d">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://arxiv.org/pdf/2212.10428.pdf">Arxiv</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://sites.google.com/view/housecat6d">Website</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://sites.google.com/view/housecat6d/dataset">Dataset</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://github.com/Junggy/HouseCat6D">Toolbox</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseHousecat6d">
+                            <div class="card card-body">
+                                <p>
+                                    Estimating 6D object poses is a major challenge in 3D computer vision. Building on
+                                    successful instance-level approaches, research is shifting towards category-level pose
+                                    estimation for practical applications. Current category-level datasets, however, fall
+                                    short in annotation quality and pose variety. Addressing this, we introduce HouseCat6D,
+                                    a new category-level 6D pose dataset. It features 1) multi-modality with Polarimetric
+                                    RGB and Depth (RGBD+P), 2) encompasses 194 diverse objects across 10 household
+                                    categories, including two photometrically challenging ones, and 3) provides high-quality
+                                    pose annotations with an error range of only 1.35 mm to 1.74 mm. The dataset also
+                                    includes 4) 41 large-scale scenes with comprehensive viewpoint and occlusion coverage,
+                                    5) a checkerboard-free environment, and 6) dense 6D parallel-jaw robotic grasp
+                                    annotations. Additionally, we present benchmark results for leading category-level pose
+                                    estimation networks.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="collapse" id="collapseVRReha">
-                        <div class="card card-body">
-                            <p>
-                                The biomechanically complex hand is crucial to a person's daily life and enables grasping,
-                                manipulating objects, and many more tasks. Impairments have a strong impact on a person's
-                                independence, quality of life, and overall well-being. Physiotherapy plays a crucial role
-                                after surgical interventions. Given the shortage of personnel and therapy session
-                                availability, enabling support and monitoring during the absence of the physiotherapist is a
-                                key future direction of medical care. Virtual reality (VR) has been shown to be able to
-                                support the rehabilitation of hand motor function. However, an individualized and motivating
-                                rehabilitation process is crucial to support the affected person until full recovery of the
-                                hand function. To address this, we present a prototype of a VR rehabilitation system that
-                                allows for the medical expert to a) control exercise planning and to b) receive a detailed
-                                report on the patients success. Our rehabilitation assistant is based on a gamified approach
-                                that targets the execution of crucial gestures for exercise.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/mr_sense.png">
-                    <br>
-                    <span class="papertitle">MR-Sense: A Mixed Reality Environment Search Assistant for Blind and Visually Impaired People</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span>H. Schieber</span>,
-                        <span style="font-weight: lighter"> C. Kleinbeck, L. Theelke, M. Kraft, J. Kreimeier and D. Roth</span>
-                    </div>
-                    <br>
-                    <span>IEEE AIxVR 2024</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseMRSense" role="button"
-                               aria-expanded="false" aria-controls="collapseMRSense">
-                                Abstract
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" href="https://ieeexplore.ieee.org/document/10445567">IEEE</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://hannahhaensen.github.io/mr-sense/">Website</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseMRSense">
-                        <div class="card card-body">
-                            <p>
-                                Search tasks can be challenging for blind or visually impaired people. To determine an
-                                object's location and to navigate there, they often rely on the limited sensory capabilities of a
-                                white cane, search haptically, or ask for help. We introduce MR-Sense, a mixed reality assistant to
-                                support search and navigation tasks. The system is designed in a participatory fashion and
-                                utilizes sensory data of a standalone mixed reality head-mounted display to perform deep learning-driven
-                                object recognition and environment mapping. The user is supported in object search tasks via
-                                spatially mapped audio and vibrotactile feedback. We conducted a preliminary user study including
-                                ten blind or visually impaired participants and a final user evaluation with thirteen blind or
-                                visually impaired participants. The final study reveals that MR-Sense alone cannot replace the cane but
-                                provides a valuable addition in terms of usability and task load. We further propose a standardized
-                                evaluation setup for replicable studies and highlight relevant potentials and challenges fostering
-                                future work towards employing technology in accessibility.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/gbot.png">
 
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="row">
-                    <img style="padding:5%" width="100%"
-                         src="assets/img/2024/timeline.png">
-                    <br>
-                    <span class="papertitle">Indoor Synthetic Data Generation: A Systematic Review</span>
-                    <br>
-                    <div class="paper-authors">
-                        <span>H. Schieber</span>,
-                        <span style="font-weight: lighter"> K. C. Demir, C. Kleinbeck, S. H. Yang and D. Roth</span>
+                    <div class="paper-card-body">
+                        <div class="papertitle">GBOT: Graph-Based 3D Object Tracking for Augmented Reality-Assisted Assembly Guidance</div>
+
+                        <div class="paper-authors">
+                            <span style="font-weight: lighter">S. Li, </span>
+                            <span>H. Schieber</span>
+                            <span style="font-weight: lighter">, B. Egger, J. Kreimeier and D. Roth</span>
+                        </div>
+
+                        <div class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (VR) 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseGBOT" role="button"
+                                   aria-expanded="false" aria-controls="collapseGBOT">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://arxiv.org/abs/2402.07677">Arxiv</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://github.com/roth-hex-lab/gbot">GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseGBOT">
+                            <div class="card card-body">
+                                <p>
+                                    Guidance for assemblable parts is a promising field for augmented reality. Augmented reality
+                                    assembly guidance requires 6D object poses of target objects in real time. Especially in
+                                    time-critical medical or industrial settings, continuous and markerless tracking of
+                                    individual parts is essential to visualize instructions superimposed on or next to the
+                                    target object parts. In this regard, occlusions by the user's hand or other objects and the
+                                    complexity of different assembly states complicate robust and real-time markerless
+                                    multi-object tracking. To address this problem, we present Graph-based Object Tracking
+                                    (GBOT), a novel graph-based single-view RGB-D tracking approach. The real-time markerless
+                                    multi-object tracking is initialized via 6D pose estimation and updates the graph-based
+                                    assembly poses. The tracking through various assembly states is achieved by our novel
+                                    multi-state assembly graph. We update the multi-state assembly graph by utilizing the
+                                    relative poses of the individual assembly parts. Linking the individual objects in this
+                                    graph enables more robust object tracking during the assembly process. For evaluation, we
+                                    introduce a synthetic dataset of publicly available and 3D printable assembly assets as a
+                                    benchmark for future work. Quantitative experiments in synthetic data and further
+                                    qualitative study in real test data show that GBOT can outperform existing work towards
+                                    enabling context-aware augmented reality assembly guidance. Dataset and code will be made
+                                    publically available.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    <span>Computer Vision and Image Understanding (CVIU) 2024</span>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseSynRev" role="button"
-                               aria-expanded="false" aria-controls="collapseSynRev">
-                                Abstract
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://www.sciencedirect.com/science/article/pii/S1077314223002874">Elsevier CVIU</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4528507">SSRN Preprint</a>
-                        </div>
-                        <div class="col-md-6 col-lg-6 col-sm-6">
-                            <a class="btn btn-dark w-100"
-                               href="https://hannahhaensen.github.io/Synthetic-Data-A-Systematic-Review/">Website</a>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseSynRev">
-                        <div class="card card-body">
-                            <p>
-                                Deep learning-based object recognition, 6D pose estimation, and semantic scene
-                                understanding requires a large amount of training data to achieve generalization. Time-consuming
-                                annotation processes, privacy, and security aspects lead to a scarcity of real-world datasets. To
-                                overcome this lack of data, synthetic data generation has been proposed, including multiple
-                                facets in the area of domain randomization to extend the data distribution. The objective of this
-                                review is to identify methods applied for synthetic data generation aiming to improve 6D pose
-                                estimation, object recognition, and semantic scene understanding in indoor scenarios. We further
-                                review methods used to extend the data distribution and discuss best practices to bridge the
-                                gap between synthetic and real-world data.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/handreha.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">Towards Continuous Patient Care with Remote Guided VR-Therapy (Poster)</div>
+
+                        <div class="paper-authors">
+                            <span style="font-weight: lighter">J. Kreimeier, </span>
+                            <span>H. Schieber</span>
+                            <span style="font-weight: lighter">, N. Lewis, M. Smietana, J. Reithmeier, V. Cnejevici, P. Prasad, A. Eid, M. Maier, D. Roth</span>
+                        </div>
+
+                        <div class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (VR) 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseVRReha" role="button"
+                                   aria-expanded="false" aria-controls="collapseVRReha">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://ieeexplore.ieee.org/abstract/document/10536420">IEEE</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseVRReha">
+                            <div class="card card-body">
+                                <p>
+                                    The biomechanically complex hand is crucial to a person's daily life and enables grasping,
+                                    manipulating objects, and many more tasks. Impairments have a strong impact on a person's
+                                    independence, quality of life, and overall well-being. Physiotherapy plays a crucial role
+                                    after surgical interventions. Given the shortage of personnel and therapy session
+                                    availability, enabling support and monitoring during the absence of the physiotherapist is a
+                                    key future direction of medical care. Virtual reality (VR) has been shown to be able to
+                                    support the rehabilitation of hand motor function. However, an individualized and motivating
+                                    rehabilitation process is crucial to support the affected person until full recovery of the
+                                    hand function. To address this, we present a prototype of a VR rehabilitation system that
+                                    allows for the medical expert to a) control exercise planning and to b) receive a detailed
+                                    report on the patients success. Our rehabilitation assistant is based on a gamified approach
+                                    that targets the execution of crucial gestures for exercise.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/mr_sense.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">MR-Sense: A Mixed Reality Environment Search Assistant for Blind and Visually Impaired People</div>
+
+                        <div class="paper-authors">
+                            <span>H. Schieber</span>,
+                            <span style="font-weight: lighter"> C. Kleinbeck, L. Theelke, M. Kraft, J. Kreimeier and D. Roth</span>
+                        </div>
+
+                        <div class="paper-venue">IEEE AIxVR 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseMRSense" role="button"
+                                   aria-expanded="false" aria-controls="collapseMRSense">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" href="https://ieeexplore.ieee.org/document/10445567">IEEE</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://hannahhaensen.github.io/mr-sense/">Website</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseMRSense">
+                            <div class="card card-body">
+                                <p>
+                                    Search tasks can be challenging for blind or visually impaired people. To determine an
+                                    object's location and to navigate there, they often rely on the limited sensory capabilities of a
+                                    white cane, search haptically, or ask for help. We introduce MR-Sense, a mixed reality assistant to
+                                    support search and navigation tasks. The system is designed in a participatory fashion and
+                                    utilizes sensory data of a standalone mixed reality head-mounted display to perform deep learning-driven
+                                    object recognition and environment mapping. The user is supported in object search tasks via
+                                    spatially mapped audio and vibrotactile feedback. We conducted a preliminary user study including
+                                    ten blind or visually impaired participants and a final user evaluation with thirteen blind or
+                                    visually impaired participants. The final study reveals that MR-Sense alone cannot replace the cane but
+                                    provides a valuable addition in terms of usability and task load. We further propose a standardized
+                                    evaluation setup for replicable studies and highlight relevant potentials and challenges fostering
+                                    future work towards employing technology in accessibility.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+                <article class="paper-card">
+                    <img class="paper-img" width="100%" src="assets/img/2024/timeline.png">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">Indoor Synthetic Data Generation: A Systematic Review</div>
+
+                        <div class="paper-authors">
+                            <span>H. Schieber</span>,
+                            <span style="font-weight: lighter"> K. C. Demir, C. Kleinbeck, S. H. Yang and D. Roth</span>
+                        </div>
+
+                        <div class="paper-venue">Elsevier Computer Vision and Image Understanding (CVIU) 2024</div>
+
+                        <div class="paper-actions row g-2">
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseSynRev" role="button"
+                                   aria-expanded="false" aria-controls="collapseSynRev">
+                                    Abstract
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://www.sciencedirect.com/science/article/pii/S1077314223002874">Elsevier CVIU</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4528507">SSRN Preprint</a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://hannahhaensen.github.io/Synthetic-Data-A-Systematic-Review/">Website</a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseSynRev">
+                            <div class="card card-body">
+                                <p>
+                                    Deep learning-based object recognition, 6D pose estimation, and semantic scene
+                                    understanding requires a large amount of training data to achieve generalization. Time-consuming
+                                    annotation processes, privacy, and security aspects lead to a scarcity of real-world datasets. To
+                                    overcome this lack of data, synthetic data generation has been proposed, including multiple
+                                    facets in the area of domain randomization to extend the data distribution. The objective of this
+                                    review is to identify methods applied for synthetic data generation aiming to improve 6D pose
+                                    estimation, object recognition, and semantic scene understanding in indoor scenarios. We further
+                                    review methods used to extend the data distribution and discuss best practices to bridge the
+                                    gap between synthetic and real-world data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
         </div>
 
     </div>
