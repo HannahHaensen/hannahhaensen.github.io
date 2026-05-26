@@ -6,7 +6,7 @@
         <hr>
 
         <div class="row g-4 paper-row">
-            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+            <div class="col-sm-12 col-md-6 col-lg-4 paper-col">
                 <article class="paper-card">
                     <img
                             style="width: 100%"
@@ -77,7 +77,7 @@
                 </article>
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+            <div class="col-sm-12 col-md-6 col-lg-4 paper-col">
                 <article class="paper-card">
                     <img
                             style="width: 100%"
@@ -134,7 +134,7 @@ To overcome these limitations, we propose a constant dynamic camera pose estimat
                 </article>
             </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-3 paper-col">
+            <div class="col-sm-12 col-md-6 col-lg-4 paper-col">
                 <article class="paper-card">
                     <img
                             style="width: 100%"
@@ -183,6 +183,55 @@ light as much as possible. This single modality can be expected to be faster as 
 the rendering quality metrics such as LPIPS, SSIM, and PSNR of TDg are 1.12%, 0.034%, and 0.01% better than the baseline MSMG values. It also reduces the training time significantly, by 12 mins 47 secs (55% improvement). Overall, our method is successful
 in deriving these 3D thermal models/radiance fields, which can ultimately have several applications, such as identifying heat
 sources critical in surveillance, search or rescue operations, and industrial inspections where temperature is widely used to monitor machines.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 paper-col">
+                <article class="paper-card">
+                    <img
+                            style="width: 100%"
+                        class="paper-img"
+                        src="assets/img/2026/liftnav.jpg"
+                        alt="LiftNav: Path Planning via Semantic Lifting in TSDF-Guided Gaussian Splatting">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">LiftNav: Path Planning via Semantic Lifting in TSDF-Guided Gaussian Splatting</div>
+
+                        <div class="paper-authors">
+                            <span>H. Schieber,* D. Frischmann* </span>
+                            <span style="font-weight: lighter">V Schaack, A. P. Schoellig and D. Roth</span>
+                            <span><em>*denotes equal contribution</em></span>
+                        <div class="paper-venue">Accepted · IEEE ICRA SRRA workshop 2026</div>
+                        </div>
+
+                        <div class="paper-actions row g-2">
+                              <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="">
+                                    Project Page
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   data-bs-toggle="collapse"
+                                   href="#collapseLiftNav"
+                                   role="button"
+                                   aria-expanded="false"
+                                   aria-controls="collapseLiftNav">
+                                    Abstract
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseLiftNav">
+                            <div class="card card-body">
+                                <p>
+                                  Autonomous robots in unknown indoor environments require both reliable collision avoidance and object-level understanding. Classical representations such as TSDF support safe planning but lack semantics, while photorealistic methods like Gaussian Splatting (GS) provide rich appearance yet suffer from soft geometry, limiting precise obstacle avoidance.
+We present LiftNav, a hybrid navigation framework built on GSFusion’s TSDF+GS dual map, augmented with a real-time pipeline of YOLO-based detection, TSDF-based 3D lifting, and B-spline trajectory optimization. This design enables flexible semantic navigation without dense 3D embeddings. We further introduce a hinge-loss-based collision penalty that improves trajectory smoothness and safety. We evaluate our approach in a simulation using the Replica dataset. Compared against a state-of-the-art radiance field baseline we show a 100% feasibility rate and shorter trajectories.
                                 </p>
                             </div>
                         </div>
