@@ -214,8 +214,8 @@ sources critical in surveillance, search or rescue operations, and industrial in
                         <div class="paper-actions row g-2">
                               <div class="col-6">
                                 <a class="btn btn-dark w-100"
-                                   href="">
-                                    Project Page
+                                   href="https://arxiv.org/abs/2605.31376">
+                                    Arxiv
                                 </a>
                             </div>
                             <div class="col-6">
@@ -235,6 +235,52 @@ sources critical in surveillance, search or rescue operations, and industrial in
                                 <p>
                                   Autonomous robots in unknown indoor environments require both reliable collision avoidance and object-level understanding. Classical representations such as TSDF support safe planning but lack semantics, while photorealistic methods like Gaussian Splatting (GS) provide rich appearance yet suffer from soft geometry, limiting precise obstacle avoidance.
 We present LiftNav, a hybrid navigation framework built on GSFusion’s TSDF+GS dual map, augmented with a real-time pipeline of YOLO-based detection, TSDF-based 3D lifting, and B-spline trajectory optimization. This design enables flexible semantic navigation without dense 3D embeddings. We further introduce a hinge-loss-based collision penalty that improves trajectory smoothness and safety. We evaluate our approach in a simulation using the Replica dataset. Compared against a state-of-the-art radiance field baseline we show a 100% feasibility rate and shorter trajectories.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 paper-col">
+                <article class="paper-card">
+                    <img
+                            style="width: 100%"
+                        class="paper-img"
+                        src="assets/img/2026/splatxtract.png"
+                        alt="SplatXtRact: Tractable Gaussian Splatting via Open World Region-of-Interest Extraction and Refinement">
+
+                    <div class="paper-card-body">
+                        <div class="papertitle">SplatXtRact: Tractable Gaussian Splatting via Open World Region-of-Interest Extraction and Refinement</div>
+
+                        <div class="paper-authors">
+                            <span>H. Schieber,</span>
+                            <span style="font-weight: lighter">C. Kleinbeck, A. P. Schoellig, S. Leutenegger, and D. Roth</span>
+                        <div class="paper-venue">Accepted · IEEE RA-L</div>
+                        </div>
+
+                        <div class="paper-actions row g-2">
+                              <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   href="https://ieeexplore.ieee.org/document/11543331">
+                                    IEEE
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-dark w-100"
+                                   data-bs-toggle="collapse"
+                                   href="#collapseSplatXtract"
+                                   role="button"
+                                   aria-expanded="false"
+                                   aria-controls="collapseSplatXtract">
+                                    Abstract
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="collapse paper-collapse" id="collapseSplatXtract">
+                            <div class="card card-body">
+                                <p>
+                                 We present a task-conditioned refinement for 3D Gaussian Splatting (GS) that enables robots or human operators to selectively extract task-relevant regions of a learned scene. Given a pre-trained GS map, our approach supports local region-of-interest (ROI) refinement, preserving a global map consistency while meeting close to real-time constraints required for interactive robotic perception. The framework decouples semantic ROI selection from initial GS optimization, allowing flexible integration with external and novel perception models. We evaluate our approach on indoor and outdoor data (TUM RGB-D, MipNeRF360), demonstrating a higher novel view syn-thesis quality compared to the state-of-the-art, reduced artifacts, and bounded latency suitable for human-in-the-loop operation.
                                 </p>
                             </div>
                         </div>
