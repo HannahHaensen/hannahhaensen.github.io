@@ -9,177 +9,260 @@
 
             <div class="col-12 paper-col">
                 <article class="paper-card">
-                    <img class="paper-img" width="100%" src="assets/img/2025/anatomy.png">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="paper-img" width="100%" src="assets/img/2025/anatomy.png">
 
-                    <div class="paper-card-body">
-                        <div class="papertitle">Multi-Layer Gaussian Splatting for Immersive Anatomy Visualization</div>
-
-                        <div class="paper-authors">
-                            <span style="font-weight: lighter">C. Kleinbeck, </span>
-                            <span>H. Schieber</span>,
-                            <span style="font-weight: lighter"> K. Engel, R. Gutjahr, D. Roth</span>
                         </div>
+                        <div class="col-9">
 
-                        <div class="paper-venue">Presented at IEEE VR 2025 · IEEE Transactions on Visualization and Computer Graphics (TVCG)</div>
+                            <div class="paper-card-body">
+                                <div class="papertitle">Multi-Layer Gaussian Splatting for Immersive Anatomy
+                                    Visualization
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseAnatomyGS"
-                                   role="button"
-                                   aria-expanded="false" aria-controls="collapseAnatomyGS">
-                                    Abstract
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://arxiv.org/pdf/2410.16978">Arxiv</a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100" href="https://osf.io/tuwh5/">Dataset</a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://github.com/roth-hex-lab/Multi-Layer-Gaussian-Splatting-for-Immersive-Anatomy-Visualization">GitHub</a>
-                            </div>
-                        </div>
+                                <div class="paper-authors">
+                                    <span style="font-weight: lighter">C. Kleinbeck, </span>
+                                    <span>H. Schieber</span>,
+                                    <span style="font-weight: lighter"> K. Engel, R. Gutjahr, D. Roth</span>
+                                </div>
 
-                        <div class="collapse paper-collapse" id="collapseAnatomyGS">
-                            <div class="card card-body">
-                                <p>
-                                    In medical image visualization, path tracing of volumetric medical data like CT scans
-                                    produces lifelike three-dimensional visualizations. Immersive VR displays can further
-                                    enhance the understanding of complex anatomies. Going beyond the diagnostic quality of
-                                    traditional 2D slices, they enable interactive 3D evaluation of anatomies, supporting
-                                    medical education and planning. Rendering high-quality visualizations in real-time,
-                                    however, is computationally intensive and impractical for compute-constrained devices
-                                    like mobile headsets. We propose a novel approach utilizing GS to create an efficient
-                                    but static intermediate representation of CT scans. We introduce a layered GS
-                                    representation, incrementally including different anatomical structures while minimizing
-                                    overlap and extending the GS training to remove inactive Gaussians. We further compress
-                                    the created model with clustering across layers. Our approach achieves interactive frame
-                                    rates while preserving anatomical structures, with quality adjustable to the target
-                                    hardware. Compared to standard GS, our representation retains some of the explorative
-                                    qualities initially enabled by immersive path tracing. Selective activation and clipping
-                                    of layers are possible at rendering time, adding a degree of interactivity to otherwise
-                                    static GS models. This could enable scenarios where high computational demands would
-                                    otherwise prohibit using path-traced medical volumes.
-                                </p>
+                                <div class="paper-venue">Presented at IEEE VR 2025 · IEEE Transactions on Visualization
+                                    and Computer Graphics (TVCG)
+                                </div>
+
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100" data-bs-toggle="collapse"
+                                           href="#collapseAnatomyGS"
+                                           role="button"
+                                           aria-expanded="false" aria-controls="collapseAnatomyGS">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://arxiv.org/pdf/2410.16978">Arxiv</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100" href="https://osf.io/tuwh5/">Dataset</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://github.com/roth-hex-lab/Multi-Layer-Gaussian-Splatting-for-Immersive-Anatomy-Visualization">GitHub</a>
+                                    </div>
+                                </div>
+
+                                <div class="collapse paper-collapse" id="collapseAnatomyGS">
+                                    <div class="card card-body">
+                                        <p>
+                                            In medical image visualization, path tracing of volumetric medical data like
+                                            CT scans
+                                            produces lifelike three-dimensional visualizations. Immersive VR displays
+                                            can further
+                                            enhance the understanding of complex anatomies. Going beyond the diagnostic
+                                            quality of
+                                            traditional 2D slices, they enable interactive 3D evaluation of anatomies,
+                                            supporting
+                                            medical education and planning. Rendering high-quality visualizations in
+                                            real-time,
+                                            however, is computationally intensive and impractical for
+                                            compute-constrained devices
+                                            like mobile headsets. We propose a novel approach utilizing GS to create an
+                                            efficient
+                                            but static intermediate representation of CT scans. We introduce a layered
+                                            GS
+                                            representation, incrementally including different anatomical structures
+                                            while minimizing
+                                            overlap and extending the GS training to remove inactive Gaussians. We
+                                            further compress
+                                            the created model with clustering across layers. Our approach achieves
+                                            interactive frame
+                                            rates while preserving anatomical structures, with quality adjustable to the
+                                            target
+                                            hardware. Compared to standard GS, our representation retains some of the
+                                            explorative
+                                            qualities initially enabled by immersive path tracing. Selective activation
+                                            and clipping
+                                            of layers are possible at rendering time, adding a degree of interactivity
+                                            to otherwise
+                                            static GS models. This could enable scenarios where high computational
+                                            demands would
+                                            otherwise prohibit using path-traced medical volumes.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </article>
             </div>
 
             <div class="col-12 paper-col">
                 <article class="paper-card highlight">
-                    <img class="paper-img" width="100%" src="assets/img/2025/SCGS.png">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="paper-img" width="100%" src="assets/img/2025/SCGS.png">
 
-                    <div class="paper-card-body">
-                        <div class="papertitle">Semantics-Controlled Gaussian Splatting for Outdoor Scene Reconstruction and Rendering in Virtual Reality</div>
-
-                        <div class="paper-authors">
-                            <span>H. Schieber</span>,
-                            <span style="font-weight: lighter"> J. Young, T. Langlotz, S. Zollmann, D. Roth</span>
                         </div>
+                        <div class="col-9">
 
-                        <div class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (VR 2025)</div>
+                            <div class="paper-card-body">
+                                <div class="papertitle">Semantics-Controlled Gaussian Splatting for Outdoor Scene
+                                    Reconstruction and Rendering in Virtual Reality
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseSCGS"
-                                   role="button"
-                                   aria-expanded="false" aria-controls="collapseSCGS">
-                                    Abstract
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="http://www.arxiv.org/pdf/2409.15959">Arxiv</a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://github.com/HannahHaensen/SCGS">GitHub</a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100" href="https://hannahhaensen.github.io/SCGS/">Website</a>
-                            </div>
-                        </div>
+                                <div class="paper-authors">
+                                    <span>H. Schieber</span>,
+                                    <span style="font-weight: lighter"> J. Young, T. Langlotz, S. Zollmann, D. Roth</span>
+                                </div>
 
-                        <div class="collapse paper-collapse" id="collapseSCGS">
-                            <div class="card card-body">
-                                <p>
-                                    Advancements in 3D rendering like Gaussian Splatting (GS) allow novel view synthesis
-                                    and real-time rendering in virtual reality (VR). However, GS-created 3D environments
-                                    are often difficult to edit. For scene enhancement or to incorporate 3D assets,
-                                    segmenting Gaussians by class is essential. Existing segmentation approaches are
-                                    typically limited to certain types of scenes, e.g., "circular" scenes, to determine
-                                    clear object boundaries. However, this method is ineffective when removing large
-                                    objects in non-"circling" scenes such as large outdoor scenes. We propose
-                                    Semantics-Controlled GS (SCGS), a segmentation-driven GS approach, enabling the
-                                    separation of large scene parts in uncontrolled, natural environments. SCGS allows
-                                    scene editing and the extraction of scene parts for VR. Additionally, we introduce a
-                                    challenging outdoor dataset, overcoming the "circling" setup. We outperform the
-                                    state-of-the-art in visual quality on our dataset and in segmentation quality on the
-                                    3D-OVS dataset. We conducted an exploratory user study, comparing a 360-video, plain
-                                    GS, and SCGS in VR with a fixed viewpoint. In our subsequent main study, users were
-                                    allowed to move freely, evaluating plain GS and SCGS. Our main study results show that
-                                    participants clearly prefer SCGS over plain GS. We overall present an innovative
-                                    approach that surpasses the state-of-the-art both technically and in user experience.
-                                </p>
+                                <div class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (VR
+                                    2025)
+                                </div>
+
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseSCGS"
+                                           role="button"
+                                           aria-expanded="false" aria-controls="collapseSCGS">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="http://www.arxiv.org/pdf/2409.15959">Arxiv</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://github.com/HannahHaensen/SCGS">GitHub</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100" href="https://hannahhaensen.github.io/SCGS/">Website</a>
+                                    </div>
+                                </div>
+
+                                <div class="collapse paper-collapse" id="collapseSCGS">
+                                    <div class="card card-body">
+                                        <p>
+                                            Advancements in 3D rendering like Gaussian Splatting (GS) allow novel view
+                                            synthesis
+                                            and real-time rendering in virtual reality (VR). However, GS-created 3D
+                                            environments
+                                            are often difficult to edit. For scene enhancement or to incorporate 3D
+                                            assets,
+                                            segmenting Gaussians by class is essential. Existing segmentation approaches
+                                            are
+                                            typically limited to certain types of scenes, e.g., "circular" scenes, to
+                                            determine
+                                            clear object boundaries. However, this method is ineffective when removing
+                                            large
+                                            objects in non-"circling" scenes such as large outdoor scenes. We propose
+                                            Semantics-Controlled GS (SCGS), a segmentation-driven GS approach, enabling
+                                            the
+                                            separation of large scene parts in uncontrolled, natural environments. SCGS
+                                            allows
+                                            scene editing and the extraction of scene parts for VR. Additionally, we
+                                            introduce a
+                                            challenging outdoor dataset, overcoming the "circling" setup. We outperform
+                                            the
+                                            state-of-the-art in visual quality on our dataset and in segmentation
+                                            quality on the
+                                            3D-OVS dataset. We conducted an exploratory user study, comparing a
+                                            360-video, plain
+                                            GS, and SCGS in VR with a fixed viewpoint. In our subsequent main study,
+                                            users were
+                                            allowed to move freely, evaluating plain GS and SCGS. Our main study results
+                                            show that
+                                            participants clearly prefer SCGS over plain GS. We overall present an
+                                            innovative
+                                            approach that surpasses the state-of-the-art both technically and in user
+                                            experience.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
                 </article>
             </div>
 
             <div class="col-12 paper-col">
                 <article class="paper-card">
-                    <img class="paper-img" width="100%" src="assets/img/2025/XRHealth_Poster.png">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="paper-img" width="100%" src="assets/img/2025/XRHealth_Poster.png">
 
-                    <div class="paper-card-body">
-                        <div class="papertitle">Extended Reality Teleconsultation for Medical Interventions: State of the Art and Perspective</div>
-
-                        <div class="paper-authors">
-                            <span>H. Schieber</span>,
-                            <span style="font-weight: lighter"> L. Theelke, D. Wilhelm, C. Piazza, U. Eck, J. Kreimeier, D. Roth</span>
                         </div>
+                        <div class="col-9">
 
-                        <div class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (VR 2025), Workshop XR Health</div>
+                            <div class="paper-card-body">
+                                <div class="papertitle">Extended Reality Teleconsultation for Medical Interventions:
+                                    State of the Art and Perspective
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100" data-bs-toggle="collapse" href="#collapseXRHealth_Poster"
-                                   role="button"
-                                   aria-expanded="false" aria-controls="collapseXRHealth_Poster">
-                                    Abstract
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://ieeexplore.ieee.org/abstract/document/10972879">IEEE</a>
-                            </div>
-                        </div>
+                                <div class="paper-authors">
+                                    <span>H. Schieber</span>,
+                                    <span style="font-weight: lighter"> L. Theelke, D. Wilhelm, C. Piazza, U. Eck, J. Kreimeier, D. Roth</span>
+                                </div>
 
-                        <div class="collapse paper-collapse" id="collapseXRHealth_Poster">
-                            <div class="card card-body">
-                                <p>
-                                    Objective: Extended reality (XR) teleconsultation is used in surgery and medical
-                                    emergencies, employing various technological approaches that differ in accuracy,
-                                    timeliness, and user preference. We conducted a systematic literature review following
-                                    PRISMA. We searched the databases IEEE Xplore, Springer Link, ACM and added an
-                                    additional manual search. In total, we found 187 studies and included 14 in our
-                                    review. Conclusion: Our findings highlight the widespread use of video-based streaming
-                                    and 3D reconstruction based on static RGB-D sensor. We found limitations in the
-                                    reconstruction quality, where existing work would benefit from high-quality rendering.
-                                    Interaction via annotations is common, addressing key usability needs for various
-                                    surgeries and emergency situations. A standardized evaluation for interaction
-                                    techniques would be beneficial for comparability. Our findings hold significant
-                                    implications for improving teleconsultation and evaluation of XR telemedicine
-                                    approaches.
-                                </p>
+                                <div class="paper-venue">IEEE Conference on Virtual Reality and 3D User Interfaces (VR
+                                    2025), Workshop XR Health
+                                </div>
+
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100" data-bs-toggle="collapse"
+                                           href="#collapseXRHealth_Poster"
+                                           role="button"
+                                           aria-expanded="false" aria-controls="collapseXRHealth_Poster">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://ieeexplore.ieee.org/abstract/document/10972879">IEEE</a>
+                                    </div>
+                                </div>
+
+                                <div class="collapse paper-collapse" id="collapseXRHealth_Poster">
+                                    <div class="card card-body">
+                                        <p>
+                                            Objective: Extended reality (XR) teleconsultation is used in surgery and
+                                            medical
+                                            emergencies, employing various technological approaches that differ in
+                                            accuracy,
+                                            timeliness, and user preference. We conducted a systematic literature review
+                                            following
+                                            PRISMA. We searched the databases IEEE Xplore, Springer Link, ACM and added
+                                            an
+                                            additional manual search. In total, we found 187 studies and included 14 in
+                                            our
+                                            review. Conclusion: Our findings highlight the widespread use of video-based
+                                            streaming
+                                            and 3D reconstruction based on static RGB-D sensor. We found limitations in
+                                            the
+                                            reconstruction quality, where existing work would benefit from high-quality
+                                            rendering.
+                                            Interaction via annotations is common, addressing key usability needs for
+                                            various
+                                            surgeries and emergency situations. A standardized evaluation for
+                                            interaction
+                                            techniques would be beneficial for comparability. Our findings hold
+                                            significant
+                                            implications for improving teleconsultation and evaluation of XR
+                                            telemedicine
+                                            approaches.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </article>
             </div>
 

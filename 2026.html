@@ -8,139 +8,206 @@
         <div class="row g-4 paper-row">
             <div class="col-12 paper-col">
                 <article class="paper-card">
-                    <img
-                            style="width: 100%"
-                        class="paper-img"
-                        src="assets/img/2026/foveated.png"
-                        alt="Hybrid Foveated Path Tracing with Peripheral Gaussians for Immersive Anatomy">
-
-                    <div class="paper-card-body">
-                        <div class="papertitle">Hybrid Foveated Path Tracing with Peripheral Gaussians for Immersive Anatomy</div>
-
-                        <div class="paper-authors">
-                            <span style="font-weight: lighter">C. Kleinbeck, L. Theelke, </span>
-                            <span>H. Schieber</span>,
-                            <span style="font-weight: lighter"> U. Eck, R. Eisenhart-Rothe, D. Roth</span>
+                    <div class="row">
+                        <div class="col-3">
+                            <img
+                                    style="width: 100%"
+                                    class="paper-img"
+                                    src="assets/img/2026/foveated.png"
+                                    alt="Hybrid Foveated Path Tracing with Peripheral Gaussians for Immersive Anatomy">
                         </div>
+                        <div class="col-9">
+                            <div class="paper-card-body">
+                                <div class="papertitle">Hybrid Foveated Path Tracing with Peripheral Gaussians for
+                                    Immersive
+                                    Anatomy
+                                </div>
 
-                        <div class="paper-venue">Accepted · IEEE VR 2026</div>
+                                <div class="paper-authors">
+                                    <span style="font-weight: lighter">C. Kleinbeck, L. Theelke, </span>
+                                    <span>H. Schieber</span>,
+                                    <span style="font-weight: lighter"> U. Eck, R. Eisenhart-Rothe, D. Roth</span>
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   data-bs-toggle="collapse"
-                                   href="#collapseFoVGS"
-                                   role="button"
-                                   aria-expanded="false"
-                                   aria-controls="collapseFoVGS">
-                                    Abstract
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://arxiv.org/pdf/2601.22026">
-                                    Arxiv
-                                </a>
-                            </div>
-                             <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://ieeexplore.ieee.org/document/11457503">
-                                    IEEE
-                                </a>
-                            </div>
-                        </div>
+                                <div class="paper-venue">Accepted · IEEE VR 2026</div>
 
-                        <div class="collapse paper-collapse" id="collapseFoVGS">
-                            <div class="card card-body">
-                                <p>
-                                    Volumetric medical imaging offers great potential for understanding complex pathologies.
-                                    Yet, traditional 2D slices provide little support for interpreting spatial
-                                    relationships, forcing users to mentally reconstruct anatomy into three dimensions.
-                                    Direct volumetric path tracing and VR rendering can improve perception but are
-                                    computationally expensive, while precomputed representations, like Gaussian Splatting,
-                                    require planning ahead. Both approaches limit interactive use.
-                                    We propose a hybrid rendering approach for high-quality, interactive, and immersive
-                                    anatomical visualization. Our method combines streamed foveated path tracing with a
-                                    lightweight Gaussian Splatting approximation of the periphery. The peripheral model
-                                    generation is optimized with volume data and continuously refined using foveal
-                                    renderings, enabling interactive updates. Depth-guided reprojection further improves
-                                    robustness to latency and allows users to balance fidelity with refresh rate.
-                                    We compare our method against direct path tracing and Gaussian Splatting. Our results
-                                    highlight how their combination can preserve strengths in visual quality while
-                                    re-generating the peripheral model in under a second, eliminating extensive
-                                    preprocessing and approximations. This opens new options for interactive medical
-                                    visualization.
-                                </p>
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           data-bs-toggle="collapse"
+                                           href="#collapseFoVGS"
+                                           role="button"
+                                           aria-expanded="false"
+                                           aria-controls="collapseFoVGS">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://arxiv.org/pdf/2601.22026">
+                                            Arxiv
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://ieeexplore.ieee.org/document/11457503">
+                                            IEEE
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="collapse paper-collapse" id="collapseFoVGS">
+                                    <div class="card card-body">
+                                        <p>
+                                            Volumetric medical imaging offers great potential for understanding complex
+                                            pathologies.
+                                            Yet, traditional 2D slices provide little support for interpreting spatial
+                                            relationships, forcing users to mentally reconstruct anatomy into three
+                                            dimensions.
+                                            Direct volumetric path tracing and VR rendering can improve perception but
+                                            are
+                                            computationally expensive, while precomputed representations, like Gaussian
+                                            Splatting,
+                                            require planning ahead. Both approaches limit interactive use.
+                                            We propose a hybrid rendering approach for high-quality, interactive, and
+                                            immersive
+                                            anatomical visualization. Our method combines streamed foveated path tracing
+                                            with a
+                                            lightweight Gaussian Splatting approximation of the periphery. The
+                                            peripheral model
+                                            generation is optimized with volume data and continuously refined using
+                                            foveal
+                                            renderings, enabling interactive updates. Depth-guided reprojection further
+                                            improves
+                                            robustness to latency and allows users to balance fidelity with refresh
+                                            rate.
+                                            We compare our method against direct path tracing and Gaussian Splatting.
+                                            Our
+                                            results
+                                            highlight how their combination can preserve strengths in visual quality
+                                            while
+                                            re-generating the peripheral model in under a second, eliminating extensive
+                                            preprocessing and approximations. This opens new options for interactive
+                                            medical
+                                            visualization.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </article>
             </div>
 
             <div class="col-12 paper-col">
                 <article class="paper-card">
-                    <img
-                            style="width: 100%"
-                        class="paper-img"
-                        src="assets/img/2026/multicam.png"
-                        alt="MultiCam: On-the-fly Multi-Camera Pose Estimation Using Spatiotemporal Overlaps of Known Objects">
-
-                    <div class="paper-card-body">
-                        <div class="papertitle">MultiCam: On-the-fly Multi-Camera Pose Estimation Using Spatiotemporal Overlaps of Known Objects</div>
-
-                        <div class="paper-authors">
-                            <span style="font-weight: lighter">S. Li, </span>
-                            <span>H. Schieber</span>,
-                            <span style="font-weight: lighter"> K. Waldow, B. Busam, J. Kreimeier, D. Roth</span>
+                    <div class="row">
+                        <div class="col-3">
+                            <img
+                                    style="width: 100%"
+                                    class="paper-img"
+                                    src="assets/img/2026/multicam.png"
+                                    alt="MultiCam: On-the-fly Multi-Camera Pose Estimation Using Spatiotemporal Overlaps of Known Objects">
                         </div>
+                        <div class="col-9">
+                            <div class="paper-card-body">
+                                <div class="papertitle">MultiCam: On-the-fly Multi-Camera Pose Estimation Using
+                                    Spatiotemporal
+                                    Overlaps of Known Objects
+                                </div>
 
-                        <div class="paper-venue">Accepted · IEEE VR 2026 / IEEE TVCG</div>
+                                <div class="paper-authors">
+                                    <span style="font-weight: lighter">S. Li, </span>
+                                    <span>H. Schieber</span>,
+                                    <span style="font-weight: lighter"> K. Waldow, B. Busam, J. Kreimeier, D. Roth</span>
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   data-bs-toggle="collapse"
-                                   href="#collapseMulticam"
-                                   role="button"
-                                   aria-expanded="false"
-                                   aria-controls="collapseMulticam">
-                                    Abstract
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://arxiv.org/pdf/2603.22839">
-                                    Arxiv
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://ieeexplore.ieee.org/document/11458691">
-                                    IEEE
-                                </a>
-                            </div>
-                        </div>
+                                <div class="paper-venue">Accepted · IEEE VR 2026 / IEEE TVCG</div>
+
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           data-bs-toggle="collapse"
+                                           href="#collapseMulticam"
+                                           role="button"
+                                           aria-expanded="false"
+                                           aria-controls="collapseMulticam">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://arxiv.org/pdf/2603.22839">
+                                            Arxiv
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://ieeexplore.ieee.org/document/11458691">
+                                            IEEE
+                                        </a>
+                                    </div>
+                                </div>
 
 
-                        <div class="collapse paper-collapse" id="collapseMulticam">
-                            <div class="card card-body">
-                                <p>
-                                    Multi-camera dynamic Augmented Reality (AR) applications require a camera pose estimation to leverage individual information from each camera in one common system. This can be achieved by combining contextual information, such as markers or objects, across multiple views. While commonly cameras are calibrated in an initial step or updated through the constant use of markers, another option is to leverage information already present in the scene, like known objects. Another downside of marker-based tracking is that markers have to be tracked inside the field-of-view (FoV) of the cameras.
-To overcome these limitations, we propose a constant dynamic camera pose estimation leveraging spatiotemporal FoV overlaps of known objects on the fly. To achieve that, we enhance the state-of-the-art object pose estimator to update our spatiotemporal scene graph, enabling a relation even among non-overlapping FoV cameras. To evaluate our approach, we introduce a multi-camera, multi-object pose estimation dataset with temporal FoV overlap, including static and dynamic cameras. Furthermore, in FoV overlapping scenarios, we outperform the state-of-the-art on the widely used YCB-V and T-LESS dataset in camera pose accuracy. Our performance on both previous and our proposed datasets validates the effectiveness of our marker-less approach for AR applications.
-                                </p>
+                                <div class="collapse paper-collapse" id="collapseMulticam">
+                                    <div class="card card-body">
+                                        <p>
+                                            Multi-camera dynamic Augmented Reality (AR) applications require a camera
+                                            pose
+                                            estimation to leverage individual information from each camera in one common
+                                            system.
+                                            This can be achieved by combining contextual information, such as markers or
+                                            objects, across multiple views. While commonly cameras are calibrated in an
+                                            initial
+                                            step or updated through the constant use of markers, another option is to
+                                            leverage
+                                            information already present in the scene, like known objects. Another
+                                            downside of
+                                            marker-based tracking is that markers have to be tracked inside the
+                                            field-of-view
+                                            (FoV) of the cameras.
+                                            To overcome these limitations, we propose a constant dynamic camera pose
+                                            estimation
+                                            leveraging spatiotemporal FoV overlaps of known objects on the fly. To
+                                            achieve that,
+                                            we enhance the state-of-the-art object pose estimator to update our
+                                            spatiotemporal
+                                            scene graph, enabling a relation even among non-overlapping FoV cameras. To
+                                            evaluate
+                                            our approach, we introduce a multi-camera, multi-object pose estimation
+                                            dataset with
+                                            temporal FoV overlap, including static and dynamic cameras. Furthermore, in
+                                            FoV
+                                            overlapping scenarios, we outperform the state-of-the-art on the widely used
+                                            YCB-V
+                                            and T-LESS dataset in camera pose accuracy. Our performance on both previous
+                                            and our
+                                            proposed datasets validates the effectiveness of our marker-less approach
+                                            for AR
+                                            applications.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </article>
             </div>
 
             <div class="col-12 paper-col">
                 <article class="paper-card">
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-9"></div>
+                    </div>
                     <img
                             style="width: 100%"
-                        class="paper-img"
-                        src="assets/img/2026/thermal2.png"
-                        alt="Supercharging Thermal Gaussian Splatting with Depth Estimation">
+                            class="paper-img"
+                            src="assets/img/2026/thermal2.png"
+                            alt="Supercharging Thermal Gaussian Splatting with Depth Estimation">
 
                     <div class="paper-card-body">
                         <div class="papertitle">Supercharging Thermal Gaussian Splatting with Depth Estimation</div>
@@ -153,9 +220,8 @@ To overcome these limitations, we propose a constant dynamic camera pose estimat
                         </div>
 
 
-
                         <div class="paper-actions row g-2">
-                              <div class="col-6">
+                            <div class="col-6">
                                 <a class="btn btn-dark w-100"
                                    href="https://hannahhaensen.github.io/TDg/">
                                     Project Page
@@ -179,13 +245,28 @@ To overcome these limitations, we propose a constant dynamic camera pose estimat
                         <div class="collapse paper-collapse" id="collapseThermal">
                             <div class="card card-body">
                                 <p>
-                                    Efficient and robust 3D scene representation is crucial in autonomous driving, robotics, and related fields. While RGB images provide valuable content for 3D reconstruction, other modalities like thermal or depth can enable additional
-information on the 3D environment. Lately, novel view synthesis methods like 3D Gaussian Splatting have started using multiple modalities to further boost their performance. But fusing or combining multi-modal data can make the process slower and can bring in additional challenges.
-Therefore, our project aims to use a single modality based on the thermal infrared domain, by removing the reliance on visible
-light as much as possible. This single modality can be expected to be faster as it does not rely on multimodal data. We propose a method, TDg, that uses only thermal images and depth estimation in its architecture to derive the thermal radiance fields. Our TDg method outperforms the MSMG (Multiple Single-Modal Gaussians) baseline in most cases on our test datasets, RGBT-Scenes and ThermalMix. On average,
-the rendering quality metrics such as LPIPS, SSIM, and PSNR of TDg are 1.12%, 0.034%, and 0.01% better than the baseline MSMG values. It also reduces the training time significantly, by 12 mins 47 secs (55% improvement). Overall, our method is successful
-in deriving these 3D thermal models/radiance fields, which can ultimately have several applications, such as identifying heat
-sources critical in surveillance, search or rescue operations, and industrial inspections where temperature is widely used to monitor machines.
+                                    Efficient and robust 3D scene representation is crucial in autonomous driving,
+                                    robotics, and related fields. While RGB images provide valuable content for 3D
+                                    reconstruction, other modalities like thermal or depth can enable additional
+                                    information on the 3D environment. Lately, novel view synthesis methods like 3D
+                                    Gaussian Splatting have started using multiple modalities to further boost their
+                                    performance. But fusing or combining multi-modal data can make the process slower
+                                    and can bring in additional challenges.
+                                    Therefore, our project aims to use a single modality based on the thermal infrared
+                                    domain, by removing the reliance on visible
+                                    light as much as possible. This single modality can be expected to be faster as it
+                                    does not rely on multimodal data. We propose a method, TDg, that uses only thermal
+                                    images and depth estimation in its architecture to derive the thermal radiance
+                                    fields. Our TDg method outperforms the MSMG (Multiple Single-Modal Gaussians)
+                                    baseline in most cases on our test datasets, RGBT-Scenes and ThermalMix. On average,
+                                    the rendering quality metrics such as LPIPS, SSIM, and PSNR of TDg are 1.12%,
+                                    0.034%, and 0.01% better than the baseline MSMG values. It also reduces the training
+                                    time significantly, by 12 mins 47 secs (55% improvement). Overall, our method is
+                                    successful
+                                    in deriving these 3D thermal models/radiance fields, which can ultimately have
+                                    several applications, such as identifying heat
+                                    sources critical in surveillance, search or rescue operations, and industrial
+                                    inspections where temperature is widely used to monitor machines.
                                 </p>
                             </div>
                         </div>
@@ -195,96 +276,151 @@ sources critical in surveillance, search or rescue operations, and industrial in
 
             <div class="col-12 paper-col">
                 <article class="paper-card">
-                    <img
-                            style="width: 100%"
-                        class="paper-img"
-                        src="assets/img/2026/liftnav.jpg"
-                        alt="LiftNav: Path Planning via Semantic Lifting in TSDF-Guided Gaussian Splatting">
-
-                    <div class="paper-card-body">
-                        <div class="papertitle">LiftNav: Path Planning via Semantic Lifting in TSDF-Guided Gaussian Splatting</div>
-
-                        <div class="paper-authors">
-                            <span>H. Schieber,* D. Frischmann* </span>
-                            <span style="font-weight: lighter">V Schaack, A. P. Schoellig and D. Roth</span>
-                            <span><em>*denotes equal contribution</em></span>
-                        <div class="paper-venue">Accepted · IEEE ICRA SRRA workshop 2026</div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img
+                                    style="width: 100%"
+                                    class="paper-img"
+                                    src="assets/img/2026/liftnav.jpg"
+                                    alt="LiftNav: Path Planning via Semantic Lifting in TSDF-Guided Gaussian Splatting">
                         </div>
+                        <div class="col-9">
+                            <div class="paper-card-body">
+                                <div class="papertitle">LiftNav: Path Planning via Semantic Lifting in TSDF-Guided
+                                    Gaussian
+                                    Splatting
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                              <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://arxiv.org/abs/2605.31376">
-                                    Arxiv
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   data-bs-toggle="collapse"
-                                   href="#collapseLiftNav"
-                                   role="button"
-                                   aria-expanded="false"
-                                   aria-controls="collapseLiftNav">
-                                    Abstract
-                                </a>
-                            </div>
-                        </div>
+                                <div class="paper-authors">
+                                    <span>H. Schieber,* D. Frischmann* </span>
+                                    <span style="font-weight: lighter">V Schaack, A. P. Schoellig and D. Roth</span>
+                                    <span><em>*denotes equal contribution</em></span>
+                                    <div class="paper-venue">Accepted · IEEE ICRA SRRA workshop 2026</div>
+                                </div>
 
-                        <div class="collapse paper-collapse" id="collapseLiftNav">
-                            <div class="card card-body">
-                                <p>
-                                  Autonomous robots in unknown indoor environments require both reliable collision avoidance and object-level understanding. Classical representations such as TSDF support safe planning but lack semantics, while photorealistic methods like Gaussian Splatting (GS) provide rich appearance yet suffer from soft geometry, limiting precise obstacle avoidance.
-We present LiftNav, a hybrid navigation framework built on GSFusion’s TSDF+GS dual map, augmented with a real-time pipeline of YOLO-based detection, TSDF-based 3D lifting, and B-spline trajectory optimization. This design enables flexible semantic navigation without dense 3D embeddings. We further introduce a hinge-loss-based collision penalty that improves trajectory smoothness and safety. We evaluate our approach in a simulation using the Replica dataset. Compared against a state-of-the-art radiance field baseline we show a 100% feasibility rate and shorter trajectories.
-                                </p>
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://arxiv.org/abs/2605.31376">
+                                            Arxiv
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           data-bs-toggle="collapse"
+                                           href="#collapseLiftNav"
+                                           role="button"
+                                           aria-expanded="false"
+                                           aria-controls="collapseLiftNav">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="collapse paper-collapse" id="collapseLiftNav">
+                                    <div class="card card-body">
+                                        <p>
+                                            Autonomous robots in unknown indoor environments require both reliable
+                                            collision
+                                            avoidance and object-level understanding. Classical representations such as
+                                            TSDF
+                                            support safe planning but lack semantics, while photorealistic methods like
+                                            Gaussian
+                                            Splatting (GS) provide rich appearance yet suffer from soft geometry,
+                                            limiting
+                                            precise obstacle avoidance.
+                                            We present LiftNav, a hybrid navigation framework built on GSFusion’s
+                                            TSDF+GS dual
+                                            map, augmented with a real-time pipeline of YOLO-based detection, TSDF-based
+                                            3D
+                                            lifting, and B-spline trajectory optimization. This design enables flexible
+                                            semantic
+                                            navigation without dense 3D embeddings. We further introduce a
+                                            hinge-loss-based
+                                            collision penalty that improves trajectory smoothness and safety. We
+                                            evaluate our
+                                            approach in a simulation using the Replica dataset. Compared against a
+                                            state-of-the-art radiance field baseline we show a 100% feasibility rate and
+                                            shorter
+                                            trajectories.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </article>
             </div>
             <div class="col-12 paper-col">
                 <article class="paper-card">
-                    <img
-                            style="width: 100%"
-                        class="paper-img"
-                        src="assets/img/2026/splatxtract.png"
-                        alt="SplatXtRact: Tractable Gaussian Splatting via Open World Region-of-Interest Extraction and Refinement">
-
-                    <div class="paper-card-body">
-                        <div class="papertitle">SplatXtRact: Tractable Gaussian Splatting via Open World Region-of-Interest Extraction and Refinement</div>
-
-                        <div class="paper-authors">
-                            <span>H. Schieber,</span>
-                            <span style="font-weight: lighter">C. Kleinbeck, A. P. Schoellig, S. Leutenegger, and D. Roth</span>
-                        <div class="paper-venue">Accepted · IEEE RA-L</div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img
+                                    style="width: 100%"
+                                    class="paper-img"
+                                    src="assets/img/2026/splatxtract.png"
+                                    alt="SplatXtRact: Tractable Gaussian Splatting via Open World Region-of-Interest Extraction and Refinement">
                         </div>
+                        <div class="col-9">
+                            <div class="paper-card-body">
+                                <div class="papertitle">SplatXtRact: Tractable Gaussian Splatting via Open World
+                                    Region-of-Interest Extraction and Refinement
+                                </div>
 
-                        <div class="paper-actions row g-2">
-                              <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   href="https://ieeexplore.ieee.org/document/11543331">
-                                    IEEE
-                                </a>
-                            </div>
-                            <div class="col-6">
-                                <a class="btn btn-dark w-100"
-                                   data-bs-toggle="collapse"
-                                   href="#collapseSplatXtract"
-                                   role="button"
-                                   aria-expanded="false"
-                                   aria-controls="collapseSplatXtract">
-                                    Abstract
-                                </a>
-                            </div>
-                        </div>
+                                <div class="paper-authors">
+                                    <span>H. Schieber,</span>
+                                    <span style="font-weight: lighter">C. Kleinbeck, A. P. Schoellig, S. Leutenegger, and D. Roth</span>
+                                    <div class="paper-venue">Accepted · IEEE RA-L</div>
+                                </div>
 
-                        <div class="collapse paper-collapse" id="collapseSplatXtract">
-                            <div class="card card-body">
-                                <p>
-                                 We present a task-conditioned refinement for 3D Gaussian Splatting (GS) that enables robots or human operators to selectively extract task-relevant regions of a learned scene. Given a pre-trained GS map, our approach supports local region-of-interest (ROI) refinement, preserving a global map consistency while meeting close to real-time constraints required for interactive robotic perception. The framework decouples semantic ROI selection from initial GS optimization, allowing flexible integration with external and novel perception models. We evaluate our approach on indoor and outdoor data (TUM RGB-D, MipNeRF360), demonstrating a higher novel view syn-thesis quality compared to the state-of-the-art, reduced artifacts, and bounded latency suitable for human-in-the-loop operation.
-                                </p>
+                                <div class="paper-actions row g-2">
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           href="https://ieeexplore.ieee.org/document/11543331">
+                                            IEEE
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-dark w-100"
+                                           data-bs-toggle="collapse"
+                                           href="#collapseSplatXtract"
+                                           role="button"
+                                           aria-expanded="false"
+                                           aria-controls="collapseSplatXtract">
+                                            Abstract
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="collapse paper-collapse" id="collapseSplatXtract">
+                                    <div class="card card-body">
+                                        <p>
+                                            We present a task-conditioned refinement for 3D Gaussian Splatting (GS) that
+                                            enables
+                                            robots or human operators to selectively extract task-relevant regions of a
+                                            learned
+                                            scene. Given a pre-trained GS map, our approach supports local
+                                            region-of-interest
+                                            (ROI) refinement, preserving a global map consistency while meeting close to
+                                            real-time constraints required for interactive robotic perception. The
+                                            framework
+                                            decouples semantic ROI selection from initial GS optimization, allowing
+                                            flexible
+                                            integration with external and novel perception models. We evaluate our
+                                            approach on
+                                            indoor and outdoor data (TUM RGB-D, MipNeRF360), demonstrating a higher
+                                            novel view
+                                            syn-thesis quality compared to the state-of-the-art, reduced artifacts, and
+                                            bounded
+                                            latency suitable for human-in-the-loop operation.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </article>
             </div>
         </div>
