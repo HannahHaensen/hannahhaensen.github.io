@@ -55,6 +55,13 @@
         }
     </style>
 
+    <style>
+        .filter-btn.active {
+            background-color: #212529;
+            color: #fff;
+        }
+    </style>
+
     <script>
         async function includeHTML() {
             const elements = document.querySelectorAll('[data-include]');
@@ -67,7 +74,61 @@
                     el.innerHTML = 'Error loading content.';
                 }
             }
+            initPaperFilters();
         }
+
+        function initPaperFilters() {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const clearBtn = document.getElementById('clearFilters');
+            if (!buttons.length || !clearBtn) return;
+
+            const active = { authorship: new Set(), venue: new Set() };
+
+            function applyFilters() {
+                const cols = document.querySelectorAll('.paper-col');
+                cols.forEach(col => {
+                    const authorship = col.dataset.authorship || '';
+                    const venues = (col.dataset.venue || '').split(' ').filter(Boolean);
+                    const authorshipMatch = active.authorship.size === 0 || active.authorship.has(authorship);
+                    const venueMatch = active.venue.size === 0 || venues.some(v => active.venue.has(v));
+                    col.style.display = (authorshipMatch && venueMatch) ? '' : 'none';
+                });
+
+                document.querySelectorAll('.paper-row').forEach(row => {
+                    const hasVisible = Array.from(row.children).some(c => c.style.display !== 'none');
+                    const section = row.closest('section');
+                    if (section) section.style.display = hasVisible ? '' : 'none';
+                });
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const group = btn.dataset.filterGroup;
+                    const value = btn.dataset.filterValue;
+                    if (active[group].has(value)) {
+                        active[group].delete(value);
+                        btn.classList.remove('btn-dark', 'active');
+                        btn.classList.add('btn-outline-dark');
+                    } else {
+                        active[group].add(value);
+                        btn.classList.add('btn-dark', 'active');
+                        btn.classList.remove('btn-outline-dark');
+                    }
+                    applyFilters();
+                });
+            });
+
+            clearBtn.addEventListener('click', () => {
+                active.authorship.clear();
+                active.venue.clear();
+                buttons.forEach(btn => {
+                    btn.classList.remove('btn-dark', 'active');
+                    btn.classList.add('btn-outline-dark');
+                });
+                applyFilters();
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', includeHTML);
     </script>
 </head>
@@ -157,6 +218,8 @@
             <div class="col-6">
                 <h2>News & Highlights</h2>
         <ul>
+            <li>[09/2026] Visiting Stanford Wu Tsai Institute</li>
+            <li>[08/2026] Early accepted MICCAI 2026 <a href="https://arxiv.org/pdf/2606.04992">Arxiv (Preprint)</a> (co-author)</li>
             <li>[06/2026] One paper accepted at IEEE RA-L (first-author)</li>
             <li>[05/2026] Attending ICVSS this year 🥳</li>
             <li>[05/2026] One workshop paper accepted at IEEE ICRA <a href="https://www.dynsyslab.org/icra2026-workshop-on-semantics-for-reliable-robot-autonomy/">SRRA</a> (shared first author)</li>
@@ -205,6 +268,21 @@
     <!-- RESEARCH -->
     <section id="Research">
 
+        <div class="mb-4" id="paperFilters">
+            <div class="mb-2">
+                <strong>Authorship:</strong>
+                <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-filter-group="authorship" data-filter-value="first">First author</button>
+                <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-filter-group="authorship" data-filter-value="co">Co-author</button>
+            </div>
+            <div class="mb-2">
+                <strong>Venue type:</strong>
+                <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-filter-group="venue" data-filter-value="journal">Journal</button>
+                <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-filter-group="venue" data-filter-value="conference">Conference</button>
+                <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-filter-group="venue" data-filter-value="workshop">Workshop</button>
+                <button type="button" class="btn btn-outline-dark btn-sm filter-btn" data-filter-group="venue" data-filter-value="extended-abstract">Extended abstract</button>
+            </div>
+            <button type="button" class="btn btn-link btn-sm px-0" id="clearFilters">Clear filters</button>
+        </div>
 
         <div data-include="preprints.html"></div>
         <div data-include="2026.html"></div>
